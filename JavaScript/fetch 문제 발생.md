@@ -2,9 +2,8 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ca7c3805-199b-4488-b323-896f9d88daab/Untitled.png)
-https://www.notion.so/wafu-alt/fetch-efa8c7acc9454314808a5d90cf55bc51#db7d8cc0906249f4823fce22a71b5b57
-![1.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b6ced0b-ce42-4fde-9f36-72f54c798e92/1.jpg)
+![1](https://user-images.githubusercontent.com/83447120/148393348-4437d4d8-47d4-4efa-8d82-6455007129fd.jpg)
+![2](https://user-images.githubusercontent.com/83447120/148393367-17b5b1a9-dde0-4855-a534-4d143dd4323c.jpg)
 
 인터넷 강의듣고 분명 코드를 똑같이 했는데 안된다. 그래서 fetch를 밖에서 빼왔는데 된다. 왜 함수 안에 있는것은 안나올까?
 
@@ -50,7 +49,7 @@ https://www.notion.so/wafu-alt/fetch-efa8c7acc9454314808a5d90cf55bc51#db7d8cc090
 
 ## 결론 해결법
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3e6a724-6501-496d-89d9-936d3037a1a6/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/83447120/148393453-01afe732-feb9-4f1a-89bc-4ca49de690e2.png)
 
 다른분들을 통해서 해결을 먼저 했다.
 vscode 우측하단에 live server있냐고 묻는데 그때 바로 느낌와서 live server 다운받아서 웹을 열었더니 해결 됬다. 해결은 했는데 가장 중유한 이유를 알아야 공부 되는것 아니겠나.
