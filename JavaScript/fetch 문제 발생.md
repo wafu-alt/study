@@ -6,7 +6,7 @@
 위는 강의
 
 아래는 나의 코드
-![2](https://user-images.githubusercontent.com/83447120/148393367-17b5b1a9-dde0-4855-a534-4d143dd4323c.jpg)
+![1](https://user-images.githubusercontent.com/83447120/148393348-4437d4d8-47d4-4efa-8d82-6455007129fd.jpg)
 
 인터넷 강의듣고 분명 코드를 똑같이 했는데 안된다. 그래서 fetch를 밖에서 빼왔는데 된다. 왜 함수 안에 있는것은 안나올까?
 
@@ -14,7 +14,7 @@
 
 ---
 
-![Untitled 1](https://user-images.githubusercontent.com/83447120/148393525-530b29b4-79d6-4f87-94c3-d1199d56e698.png)
+![2](https://user-images.githubusercontent.com/83447120/148393367-17b5b1a9-dde0-4855-a534-4d143dd4323c.jpg)
 
 아니!!! 하루전까지 되었는데 이번에는 둘 다 안된다 why??? 
 
@@ -52,7 +52,7 @@
 
 ## 결론 해결법
 
-![1](https://user-images.githubusercontent.com/83447120/148393348-4437d4d8-47d4-4efa-8d82-6455007129fd.jpg)
+![Untitled 1](https://user-images.githubusercontent.com/83447120/148393525-530b29b4-79d6-4f87-94c3-d1199d56e698.png)
 
 다른분들을 통해서 해결을 먼저 했다.
 vscode 우측하단에 live server있냐고 묻는데 그때 바로 느낌와서 live server 다운받아서 웹을 열었더니 해결 됬다. 해결은 했는데 가장 중유한 이유를 알아야 공부 되는것 아니겠나.
