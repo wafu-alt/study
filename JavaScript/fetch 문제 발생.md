@@ -2,7 +2,7 @@
 
 ---
 
-![1](https://user-images.githubusercontent.com/83447120/148393348-4437d4d8-47d4-4efa-8d82-6455007129fd.jpg)
+![Untitled](https://user-images.githubusercontent.com/83447120/148393453-01afe732-feb9-4f1a-89bc-4ca49de690e2.png)
 위는 강의
 
 아래는 나의 코드
@@ -52,7 +52,7 @@
 
 ## 결론 해결법
 
-![Untitled](https://user-images.githubusercontent.com/83447120/148393453-01afe732-feb9-4f1a-89bc-4ca49de690e2.png)
+![1](https://user-images.githubusercontent.com/83447120/148393348-4437d4d8-47d4-4efa-8d82-6455007129fd.jpg)
 
 다른분들을 통해서 해결을 먼저 했다.
 vscode 우측하단에 live server있냐고 묻는데 그때 바로 느낌와서 live server 다운받아서 웹을 열었더니 해결 됬다. 해결은 했는데 가장 중유한 이유를 알아야 공부 되는것 아니겠나.
