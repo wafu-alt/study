@@ -3,7 +3,7 @@
 ---
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ca7c3805-199b-4488-b323-896f9d88daab/Untitled.png)
-
+https://www.notion.so/wafu-alt/fetch-efa8c7acc9454314808a5d90cf55bc51#db7d8cc0906249f4823fce22a71b5b57
 ![1.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b6ced0b-ce42-4fde-9f36-72f54c798e92/1.jpg)
 
 인터넷 강의듣고 분명 코드를 똑같이 했는데 안된다. 그래서 fetch를 밖에서 빼왔는데 된다. 왜 함수 안에 있는것은 안나올까?
