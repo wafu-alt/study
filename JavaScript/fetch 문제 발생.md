@@ -11,7 +11,7 @@
 
 ---
 
-![2.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2a72bcf9-1d86-451b-8107-e2265c7aa24d/2.jpg)
+![Untitled 1](https://user-images.githubusercontent.com/83447120/148393525-530b29b4-79d6-4f87-94c3-d1199d56e698.png)
 
 아니!!! 하루전까지 되었는데 이번에는 둘 다 안된다 why??? 
 
