@@ -3,9 +3,11 @@
 ---
 
 ![Untitled](https://user-images.githubusercontent.com/83447120/148393453-01afe732-feb9-4f1a-89bc-4ca49de690e2.png)
+
 위는 강의
 
 아래는 나의 코드
+
 ![1](https://user-images.githubusercontent.com/83447120/148393348-4437d4d8-47d4-4efa-8d82-6455007129fd.jpg)
 
 인터넷 강의듣고 분명 코드를 똑같이 했는데 안된다. 그래서 fetch를 밖에서 빼왔는데 된다. 왜 함수 안에 있는것은 안나올까?
