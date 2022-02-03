@@ -43,7 +43,7 @@ Hello World! top이 가장 먼저 출력되고,
 
 Hello World! mid가 두번째로 바로 출력된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/237624dd-fe5f-408b-b575-e33305b4947f/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/237624dd-fe5f-408b-b575-e33305b4947f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220203T123720Z&X-Amz-Expires=86400&X-Amz-Signature=71da573fdcb61512aec9bdce2240f7c7e22057e709ae4bb3283fe045a58a883e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 async
 일반 스크립트에 async 속성이 존재하면 HTML 구문 분석 중에도 스크립트를 가져오며, 사용 가능해지는 즉시 평가를 수행합니다.
