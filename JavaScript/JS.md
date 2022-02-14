@@ -13,7 +13,7 @@
 5. webAPIs는 
  - setTimeOut, Dom, AJAX(HTTP요청)이 있음
  - 이벤트 루프와 콜백 큐를 가짐
-6.  
+
 
 
 ## 참고
