@@ -15,8 +15,5 @@ https://hazel-developer.tistory.com/152
 https://hazel-developer.tistory.com/11   
 https://www.youtube.com/watch?v=IT35nyt-tzI
 
-
-자바스크립트 더 알기   
-https://hanamon.kr/javascript-%EB%9F%B0%ED%83%80%EC%9E%84-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%99%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84/
    
    
