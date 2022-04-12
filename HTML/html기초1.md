@@ -23,11 +23,11 @@ Hyper Text Markup Language 마크업 언어
 
 마크업 - 목업, 레이아웃으로 나누는 것 (header, main) 
 
-<h1>Hello, World Wide Web</h1>
+`<h1>`Hello, World Wide Web`</h1>`
 
-`Hello, World Wide Web` 컨텐츠
+- `Hello, World Wide Web` 컨텐츠
 
-`h1` 태그(꼭 닫아주기)  , 대소문자 구분하지 않음
+- `<h1>` 태그(꼭 닫아주기)  , 대소문자 구분하지 않음
 
 <div *style*="color: red">Web</div>
 
