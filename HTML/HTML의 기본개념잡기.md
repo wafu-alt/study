@@ -76,10 +76,8 @@ Hyper Text Markup Language 마크업 언어
 `<title>Document Title</title>` html의 페이지(page) 혹은 문서(document) 제목
 
 ## HTML으로 구조 잡기
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a472389-61a3-4260-8adb-32afc874a832/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/15576705-fa38-4817-9c29-469b404eb41e/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/83447120/163348028-cd4a6f59-b6cc-4ca8-bd71-6b99734fe160.png)
+![Untitled 1](https://user-images.githubusercontent.com/83447120/163348033-d1910017-41b7-4d73-a3d7-0341822d18dc.png)
 
 `header` (header) 웹사이트의 머리글을 의미
 
@@ -108,10 +106,9 @@ MDN : [https://developer.mozilla.org/ko/docs/Web/HTML/Element/a](https://develop
 ### inline과 block 차이
 
 웹 개발자도구에서 아래 아이콘을 클릭하고 각 해당하는 영역에 가져다 되면 각 태그의 영역을 알 수 있다
+![Untitled 2](https://user-images.githubusercontent.com/83447120/163348061-fc64d88e-20f1-445d-9d03-bfcab755a9d9.png)
+![Untitled 3](https://user-images.githubusercontent.com/83447120/163348066-a4471135-4218-4cfb-97a5-14b4e3c1b335.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b2d9ab72-62f8-4f63-9c7b-1c9bceb54e3f/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d166d796-cedf-434d-bec8-cf66a5f29eec/Untitled.png)
 
      block : 한줄 차지 `div` 태그가 영역나눌때 사용
 
