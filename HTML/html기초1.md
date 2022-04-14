@@ -1,95 +1,111 @@
-출처 : 엘리스 코딩 교육에서 
-
-    
-# 자바스크립트 - 웹코딩 기초, HTML
-
-- web이해
-- 웹사이트의 뼈대 만들기
-- 웹사이트 꾸미기
-- 반응형 웹사이트로 만들기
-
-
-## 웹이 무엇인지 이해한다
-
-www , w3 - World Wide Web
-
-복잡한 소스코드가 보여지는 이유? 브라우저가 코드를 해석하고 그려줌 
-
-점유율에 따라 지원되는 브라우저 염두에서 코드를 짜는게 유리함
-
-### HTML의 기본개념잡기
+## HTML의 기본개념잡기
 
 Hyper Text Markup Language 마크업 언어
 
 마크업 - 목업, 레이아웃으로 나누는 것 (header, main) 
 
-`<h1>`Hello, World Wide Web`</h1>`
+저장되는 형식 : 원하는이름`.html`
 
-- `Hello, World Wide Web` 컨텐츠
+### HTML기본 구조
 
-- `<h1>` 태그(꼭 닫아주기)  , 대소문자 구분하지 않음
+```jsx
+<!DOCTYPE html>
+<html>
+  <head>
+		문서의 보이지않는 내용이 들어감
+  </head>
 
+  <body>
+    내용
+  </body>
+</html>
+```
+
+`<!DOCTYPE html>`  HTML의 문서 선언 : 없어도 에러 없음
+
+### 태그
+
+```jsx
+<h1>Hello, World Wide Web</h1>
+<여는태그> 컨텐츠 </닫는태그>
+<img src="이미지경로" alt="이미지 못 불러왔을 때의 설명"/>
+```
+
+`Hello, World Wide Web` 컨텐츠(contents) : 태그 사이 내용물
+
+`<h1>` 태그(tag) or 요소(element)(꼭 닫아주기`</h1>`)  , 대소문자 구분하지 않음
+
+`<img />` 단일태그는 열고 바로 닫을 수 있고 단일 태그 아니더라도 태그사이에 컨텐츠가 없다면 바로 닫을 수 있다.(img, meta, br, hr , link, input 등)(바로 닫기 : <div /> - 공간 만들기 용)
+
+```jsx
 <div *style*="color: red">Web</div>
+<태그 속성 = "속성값"> 
+```
 
-*`style`* 속성명
+*`style`* 속성(attribute)명
 
-`color: red` 속성값
+`color: red` 속성값(arguments)
 
-문서당 `h1`(heading)은 거의 하나 들어감 (2개면 (seo)검색이 잘 안됨)
+### HTML 일반적인 구조
 
-`a`(anchor) 링크를 만들어 줌
+```jsx
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Title</title>
+  </head>
+  <body>
+		주요 내용
+	</body>
+</html>
+```
 
-`img`(image) 이미지를 보여줌
+`<html lang="en">`*lang*="en"은 스크린 리더가 인식함 , 시각장애인을 위한 보조 공학, 스크린 리더가 언어를 인식하여 자동으로 음성을 변환하거나 언어에 적합한 발음을 제공
 
-`p`(paragraph) 문단 단위를 의미,일반적인 내용을 쓸때 씀
+`<meta charset="UTF-8" />`메타는 내장되어 있는 정보
 
-`ul ol li` un(ordered list) 순서가 없는 / 있는 목록을 의미
+인코딩언어. 언어 세팅(서버관련) 주로 utf-8(글로벌사이트), euc-kr(국내사이트) -서버설정과 맞춰야함
 
-list item의 약자 , 목록의 내용을 의미
+`<meta http-equiv="X-UA-Compatible" content="IE=edge" />` 브라우저 설정 , IE = edge가 같은 브라우저임
 
-`strong` `em` (emphasis) 모두 강조되는 내용을 의미, 굵게/ 기울기
+`<meta name="viewport" content="width=device-width, initial-scale=1.0" />` 기기에 대한 화면 최적화. `@media` 미디어쿼리와 관련 됨 
 
-더 많은 태그는 아래에서 참조
+`<title>Document Title</title>` html의 페이지(page) 혹은 문서(document) 제목
+
+## HTML으로 구조 잡기
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a472389-61a3-4260-8adb-32afc874a832/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/15576705-fa38-4817-9c29-469b404eb41e/Untitled.png)
+
+`header` (header) 웹사이트의 머리글을 의미
+
+ `nav` (navigation) 주로 메뉴버튼을 의미
+
+`aside` 옆에 따라다니면서 있는 메뉴바
+
+`mian` body내의 주요 컨텐츠를 의미
+
+`section` `mian`내의 영역 분할
+
+`article` 사이트 내 독립적인 구분을 의미(ex.블로그글, 뉴스기사) 
+
+- h1이 항상 필수
+
+`footer` 웹사이트의 맨 하단을 의미, 주로 주소,연락처,하단로고,저작권,sns,개인정보처리방침,이용약관,이메일무단수집거부 등의 정보를 적음
+
+## 태그의 종류
+
+### 태그 참조
 
 w3school : [https://www.w3schools.com/tags/tag_a.asp](https://www.w3schools.com/tags/tag_a.asp)
 
 MDN : [https://developer.mozilla.org/ko/docs/Web/HTML/Element/a](https://developer.mozilla.org/ko/docs/Web/HTML/Element/a)
 
-`<!DOCTYPE *html*>` 문서 선언, 없어도 에러 없음
-
-`<html *lang*="en">` *lang*="en"은 스크린 리더가 인식함 , 시각장애인을 위한 보조 공학, 스크린 리더가 언어를 인식하여 자동으로 음성을 변환하거나 언어에 적합한 발음을 제공
-
-`<head>`
-
-`<meta *charset*="utf-8"/>`  메타는 내장되어 있는 정보
-
-인코딩설정, 문자 표현할 수있는 인코딩
-
-`<title>My Website</title>` 페이지 제목
-
-`</head>`
-
-`<body>` 표시되는 모든 컨텐츠
-
-`<h1>Hello, World Wide Web!</h1>`
-
-`</body>`
-
-`</html>`
-
-`<meta charset="utf-8"/>`  meta태그를 열고 닫는것을 한줄로 표현도 가능하다 `<meta />`
-
-vscode에서 ctrl+x에서 플러그인
-
-****`Prettier - Code formatter` 를 설치해서 줄 바꿈 이쁘게 할 수 있음**
-
-****`Live Server` 코드 고치고 웹에서 새로고침 안되도 반영됨**
-
-****`Auto Rename Tag` 여는태그 고치면 닫는 태그도 고쳐줌**
-
-### HTML으로 구조 잡기
-
-inline과 block 차이
+### inline과 block 차이
 
 웹 개발자도구에서 아래 아이콘을 클릭하고 각 해당하는 영역에 가져다 되면 각 태그의 영역을 알 수 있다
 
@@ -101,140 +117,336 @@ inline과 block 차이
 
 inline : 포함된 내용만(컨텐츠) `span` 태그가 영역 나눌때 사용
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/784475b3-f1b5-4471-8929-5ab741d60246/Untitled.png)
+### 각 종류별 태그
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/15576705-fa38-4817-9c29-469b404eb41e/Untitled.png)
+주석
 
- `header` (header) 웹사이트의 머리글을 의미
+- `<!-- 내용 -->`
 
- `nav` (navigation) 주로 메뉴버튼을 의미
+글자 관련 태그
 
-`mian` body내의 주요 컨텐츠를 의미
+- `공백spacebar`은 한칸만 인식하고 그외에는 인식하지 못한다. 그래서 엔티티코드(Entity Code)를 사용하는데  `&nbsp;` 공백한칸 의미. spacebar와 같이 쓰면 공백1칸만 인정됨
+- `<br>` 줄바꿈 하고싶을때
+- `<p></p>` 단락으로 묶고싶을때 출력 상태로 보면  `<br>`과 같아 보이는데 한 단락으로 묶냐 안 묶냐 차이
+- `<em>`글자 기울임`</em>` = `<i></i>` 같은 효과 내지만 강조효과가 다른데 강조라는것은 시각장애인이  "스크린리더"로 읽을때 강조일때는 소리가 더 크게 남 이러한 것을→ 시맨틱Semantic태그 = 의미 담은 태그
+- `<strong>`글자 강조`</strong>` (시맨틱태그)= `<b></b>`
+- `<h1>`제목`</h1>` h1~h6까지 있음 글자 크기 굵기가 다르고 위아래 자동 줄바꿈 됨
+문서당 h1은 한개만 씀. 두개 이상 되면 seo에 검색이 잘 안됨
 
-`article` 사이트 내 독립적인 구분을 의미(ex.블로그글, 뉴스기사) 
+목록 관련 태그
 
-- h1이 항상 필수
-
-`footer` 웹사이트의 맨 하단을 의미, 주로 저작권, 작성자 등의 정보를 적음
-
-### CSS 맛보기
-
-Cascading Style Sheet
-
-html로 만들어진 뼈대를 꾸며줌
-
-각 요소에 레이아웃을 조절
-
-애니메이션 효과도 가능
-
-div { background-color : blue; }
-
-`div` : 선택자  - 어떤 요소에 스타일을 적용할지 선택
-
-`background-color` : 속성 - 어떤 속성을 적용할지 정의
-
-`;` : 구분자 - 각 속성과 속성값 간에는 세미클론(;)으로 구분
-
-### 인라인 스타일(Inline Style)
+- Ordered list 숫자로 표현 (순서형)
 
 ```jsx
-<div style="background-color: blue;">
-  저는 인라인 스타일의 div입니다.
-  <span style="background-color: red;">
-    저는 인라인 스타일의 span입니다.
-  </span>
-</div>
+<ol type="(A,a,i 이런것들 있음 )"> 
+	<li>내용 </li>
+	<li>내용 </li>
+	<li>내용 </li>
+	<li>내용 </li>
+</ol> , ol은 혼자서 못씀. li와 같이 씀 그래서 ol는 부모, li는 자식 태그임
 ```
 
-- 우선순위가 가장 높음
-- 고드 재활용이 좋지 못함
-- 가급적 쓰지 않는 것이 좋음(테스트 용도로 사용)
+- Unordered List (bulleted list. ) 블릿기호 (비순서형)
 
-### 내부스타일(Internal Style)
+```jsx
+<ul type="(circle, square 이런것들 있음)"> 
+	<li>내용</li>
+	<li>내용</li>
+	<li>내용</li>
+	<li>내용</li>
+</ul>
+```
+
+- Description list (정의형 목록)
+
+```jsx
+<dl> 
+	<dt>제목</dt>
+	<dd>설명</dd>
+	<dt>제목</dt>
+	<dd>설명</dd>
+	<dd>설명</dd>
+</dl>
+```
+
+표 관련 태그
+
+- 열(column) , 행(row) , 칸(cell)
+
+```jsx
+ <table border="1"(선1픽셀 줌, 기본값0) cellspacing="0"(칸외곽 표의 외각 공간 없애줌. 2줄에서 1줄로 바꿈) 
+  cellpadding="10"(칸안에서 10픽셀만큼 공간주는것) align="center"(화면 비율로 표를 중앙에 둠) 
+  width="50"(칸 가로크기 50픽셀 줌 50%하면 화면크기 비율로 50%만큼 가로크기) >
+    <tr> 1행을 늘려줌 table row
+      <td>내용</td> <th>표안에서 제목에 해당</th> 1행 1열과 2열 생성
+    </tr>
+    <tr>
+      <th colspan="2"(옆 두칸만큼 길이 늘어남)>제목</th> <td rowspan="2"(아래 두칸만큼길이 늘어남)>내용</td>
+    </tr>
+  </table>
+
+표제목 <table> <caption>제목</caption> </table>
+
+<table border="1" cellspacing="0" cellpadding="10" align="center" width="50">
+  <tr>
+    <th>이름</th> <th>생년월일</th> <th rowspan="2">기타사항</th> <th>참여여부</th>
+  </tr>
+	<tr>
+		<td></td> 		<td></td>		<td></td>		<td></td>
+	</tr>
+  <tr>
+    <td>내용</td> <td>내용</td> <td colspan="2">내용</td> <td>내용</td>
+  </tr>
+</table>
+```
+
+기타 태그
+
+- 이미지 태그
+
+```jsx
+<img src="logo.jpg"  alt="로고">
+img가 기본이고 src 속성이 붙고 속성값에 경로가 들어간다
+<img src="이미지 경로" alt="이미지 설명"/>
+alt경우는 시각장애인한테 alt 속성값을 읽어준다 또는 이미지 불러오기 실패했을 때 어떤 이미지인지 설명해준다.
+```
+
+경로 : 
+
+- 절대 경로(주소줄 경로)
+C:\Program Files\Google\images\logo.jpg
+- 상대 경로
+내가 작업하고 있는 html파일 기준으로 이미지 파일을 찾음
+같은 폴더 위치 : logo.jpg
+하위 폴더 위치 : images/logo.jpg
+상위 폴더 위치 : ../logo.jpg
+- 하이퍼링크 태그
+
+```jsx
+a는 anchor의 약자다
+<a href="경로와 파일명" target="(_self, _blank)">
+target속성값에는 _self와 _blank가 있고 보는 창에서 열것인지 새 창에서 열것인지 선택할 수 있다.
+
+<a href="home.html">홈</a>
+<a href="#">홈</a>  : 빈 값을 넣고 싶을때
+```
+
+- 구분선 태그 `<hr>`(horizontal rule)
+- 동영상,맵 공유 태그 `<iframe>`
+
+```jsx
+유튜브 영상 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v-vo_G7FZlk" title="YouTube video player"
+
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+allowfullscreen></iframe>
+구글 맵
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.096182419837!2d129.0730083155213!3d35.17915521494972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356893547acb7d77%3A0x47b8fdf24219a59a!2z67aA7IKw6rSR7Jet7Iuc7LKt!5e0!3m2!1sko!2skr!4v1622164709895!5m2!1sko!2skr"
+
+width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+기본 형식
+<iframe src="경로"></iframe>
+```
+
+- 오디오,비디오 태그 `<audio>` , `<video>`
+
+```jsx
+<audio src="data/music.mp3" controls="controls"></audio>
+확장자 : mp3, ogg 등등
+
+기본 형식
+<audio src="경로" controls="controls"></audio>
+controls="controls(생략되도 상관없음)" 컨트롤 박스는 브라우저마다 지원하는 모양이 다르다
+
+<video src="data/Seoul.mp4" controls="controls" poster="data/seoul_poster.jpg"></video>
+확장자 : mp4, wmv, avi 등등
+
+기본 형식
+<video src="경로" controls="controls"></video>
+컨트롤 박스 없으면 이미지처럼 보여진다. 
+재생 전 이미지 설정 속성 poster="경로"
+브라우저마다 지원 안하는 형식 있으며, 그 형식을 다 적어줘야한다.
+-> 유튜브 영상을 끌어다가 연결하는 것이 사이트에 올리는 것보다 빠르다
+```
+
+- 공간분할
+
+```jsx
+<span></span> p태그와 비슷하지만 의미없는 태그, 문자열 묶는 느낌
+<div></div> display : block으로 공간 분할
+```
+
+- 폼 태그 `<form>`  + `<input>` + `<textarea>` + `<select>`
+
+```jsx
+<form name="join" method="POST" action="join.html">
+    <fieldset>
+    <!-- 그룹할 수 있음 -->
+      <legend>input 관련 요소</legend> <!-- 그룹명 지어줄수있음. -->
+        1. 텍스트 input <br>
+        <input type="text" size="50" maxlength="5"> <br>
+        <!-- size=영문 50자 , maxlength최대글자 수 제한 -->
+
+        2. 비밀번호 input <br> <label for="pw">비밀번호</label>
+        <!-- label은 시각장애인이 읽을 수 있게 해주기위해 만듦 -->
+        <input type="password" id="pw"> <br>
+        <!-- 글자 모양이 비공개가 된다. -->
+
+        3. 파일 선택 input <br>
+        <input type="file"> <br>
+
+        4. 이미지 (손모양으로 변함) input <br>
+        <input type="image" src="images/search.gif" alt="검색"> <br>
+
+        5. 선택모양 라디오 input <br>
+        <input type="radio" name="gender" id="m">남자
+        <input type="radio" name="gender" id="w">여자<br>
+        <!-- radio 속성쓸 때는 name과 id속성을 기입해야함
+            name값은 동일하고 id값은 다르게 입력해야한다.-->
+
+        6. 다중선택가능하게하는 체크박스 input <br>
+        <input type="checkbox">댄스
+        <!-- name, id가 있어야하지만 일단 생략 -->
+        <input type="checkbox">독서
+        <input type="checkbox">잠
+        <input type="checkbox">뛰기 <br>
+
+        7. 제출할 수 있는 input <br>
+        <input type="submit" value="제출. 확인"> <br><!-- 브라우저마다 모습이 다를 수 있음 ,값으로 이름 바꿀 수 도 있음-->
+
+        8. 취소 버튼 input <br>
+        <input type="reset" value="초기화. 취소"> <br>
+
+        9. 범용버튼 input <br>
+        <input type="button" value="빈칸.우편번호"> <br>
+
+        10. 브라우저에 표시 되지않음 input <br>
+        <input type="hidden"> <br>
+        <!-- 회원가입할 경우 그 날짜를 전송함, 알고보면 여러가지 전송할수도 -->
+	</fieldset>
+
+	<fieldset>
+        11. 텍스트 구역 textarea <br>
+        <textarea cols="30" rows="10">기본내용 저장할 수 있음</textarea> <br>
+        <!-- cols열 30자, rows행 10자 기본형식으로 잡아줌-->
+
+        12. select <br>
+        <select name="" id="">
+            <option value="">010</option>
+            <option value="">011</option>
+            <option value="">016</option>
+            <option value="">017</option>
+            <option value="">018</option>
+        </select> <!-- 아래로 선택할 수 있게 됨 -->
+  </fieldset> 
+
+</form>
+```
+
+html구조와 종합 사용
 
 ```jsx
 <head>
-  <style>
-    div {
-      background-color: blue;
-    }
-    span {
-      background-color: red;
-    }
-  </style>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제목</title>
+		
 </head>
+
+<!-- 위의 내용 종합 -->
+<body>
+	<header>
+		<h1><a href="#">문서 제목 및 로고<img src="로고경로" alt="대표로고"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="#">메뉴1</a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li><a href="#">메뉴3</a></li>
+        </ul>
+      </nav>
+	</header>
+
+	<main>
+		<article>
+      <h1></h1>
+      <p></p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </article>		
+	
+		<section>
+	    <br> <p>내용</p> <strong>내용</strong> <em>내용</em>
+	    <h2~6>제목</h2~6> 
+	    <!-- 목록 -->
+	    <ol>
+	        <li>내용</li>
+	    </ol>
+	    <ul>
+	        <li>내용</li>
+	    </ul>
+	    <dl>
+	        <dt>제목</dt>
+	        <dd>내용</dd>
+	    </dl>
+		
+	    <!-- 표 -->
+	    <table border="1" cellspacing="0" cellpadding="5" width="">
+	        <caption>제목</caption>
+	        <tr>
+	            <th colspan="2" rowspan="2">제목</th> <td>내용</td>
+	        </tr>
+	    </table>
+	    <!-- 이미지 -->
+	    <img src="경로와 파일명.확장자" alt="이미지">
+	    <!-- 하이퍼링크 -->
+	    <a href="경로와 파일명" target="_self,_blank" title="툴팁같은 대체 텍스트">내용</a>
+	    <!-- 아이프레인(구글지도,유튜브영상) -->
+	    <iframe src="" width="" height=""></iframe> 
+	    <!-- 비디오 mp4 -->
+	    <video src="" controls="controls" muted autoplay></video>
+	     <!-- mutede 자동 음소거/ autoplay 자동재생-->
+	    <!-- 오비오 mp3 -->
+	    <audio src=""></audio>
+	    <!-- 폼태그 -->
+	    <form action="">
+	        <fieldset>
+	            <legend>제목</legend>
+	            <input type="text">
+	            <input type="password">
+	            <input type="file">
+	            <input type="image">
+	            <input type="radio">
+	            <input type="checkbox">
+	            <input type="submit">
+	            <input type="reset">
+	            <input type="button">
+	            <input type="hidden">
+	            <textarea name="" id="" cols="30" rows="10"></textarea>
+	            <select name="" id="">
+	                <option value=""></option>
+	            </select>
+	        </fieldset>
+	    </form>
+		</section>
+	</main>
+	<footer>
+    <ul class="footer_link">
+        <li><a href="#">서비스이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이메일집단수집거부</a></li>
+        <li><a href="#">오시는길</a></li>
+    </ul>
+
+    <address>
+        ( 16229 ) 경기도 수원시 영통구 광료로 107 경기도경제과학진흥원
+    </address>
+    <p class="copy">Copyright &copy; 2018 GBSA.or.kr All Rights Reserved.</p>
+  </footer>
+</body>
 ```
-
-- 인라인 스타일 다음으로 우선순위 적용
-- 특정 페이지에서만 적용하기 위해서 사용
-- 주로 <head> 태그 안에 정의
-
-### 외부 스타일(External Style)
-
-```jsx
-<head>
-  <link rel="stylesheet" href="main.css" />
-</head>
-```
-
-- 가장 많이 사용하는 방식
-- 협업에 우수함
-- 여러 html에 동일한 스타일을 적용할 수 있음
-
-인라인 > 내부 > 외부 > 브라우저 기본 스타일
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d00aec5-48f6-4f19-af28-db96656273d7/Untitled.png)
-
-### 선택자 비교
-
-`body` : 태그 선택자 - 선택자에 태그명을 그대로 써주면 됨, 문서 전체 태그에 적용
-
-`#example1` : ID 선택자 - 선택자 앞에 샾(#)을 붙여주면 ID를 의미, 특정 요소만 적용할 때 사용 (중복 사용 불가)
-
-`.example2` : CLASS선택자 - 선택자 앞에 점(.)을 붙여주면 CLASS를 의미 범용적으로 적용할 때 사용 (중복 사용 가능)
-
-### 주요 속성
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eaf2a2b4-5d18-4a2d-b3da-dfeb6835abed/Untitled.png)
-
-`width` 요소 너비를 설정 ( px, %, rem, ...)
-
-`height` 요소 높이를 설정 ( px, %, rem ...)
-
-`color` 글자의 색상을 설정 (#999999, brown ....)
-
-`font-size`  글자 크기를 설정
-
-`font-family` 글자의 폰트를 설정, 여러개 설정시 앞에 폰트부터 있는 것을 적용
-
-`font-style` 글자의 기울기를 설정 (italic)
-
-`font-weight` 글자의 두께를 설정 (bold,100,200, ...900), 글자체가 지원하지 않으면 근처 수치에 붙음
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e22ac8e-f60b-4794-a90d-7756650e591b/Untitled.png)
-
-`border-style` 테두리 스타일을 설정 (dotted, double .. )
-
-`border-color` 테두리 색상을 설정 (#999999, brown .. )
-
-`border-width` 테두리 두께를 설정
-
-`border` 위 속성들을 한 번에 정의할 수 있음
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ac3177b-b30e-4f73-b033-f7485545a2b7/Untitled.png)
-
-`background-color` 배경의 색상을 설정
-
-`image` 이미지를 설정 , 여러개 가능 (height가 있어야 이미지가 보임)
-
-`repeat` 반복여부를 설정 (repeat, repeat-x, round .. )
-
-`position` 정렬 위치를 설정 (top, left .. )
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20765166-03de-450f-bdf6-696b94cff708/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/777eda54-bcd6-4ec3-a6d4-59e24381d60c/Untitled.png)
-
-`margin`  바깥 여백 영역 설정
-
-`padding`  안쪽 여백 영역 설정
