@@ -342,7 +342,7 @@ controls="controls(생략되도 상관없음)" 컨트롤 박스는 브라우저�
 </form>
 ```
 
-html구조와 종합 사용
+## html구조와 종합 사용
 
 ```jsx
 <head>
