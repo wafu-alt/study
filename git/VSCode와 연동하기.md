@@ -56,8 +56,8 @@
 
 vscode에서 ctrl+x에서 플러그인
 
-****`Prettier - Code formatter` 를 설치해서 줄 바꿈 이쁘게 할 수 있음**
+- **`Prettier - Code formatter` 를 설치해서 줄 바꿈 이쁘게 할 수 있음**
 
-****`Live Server` 코드 고치고 웹에서 새로고침 안되도 반영됨**
+- **`Live Server` 코드 고치고 웹에서 새로고침 안되도 반영됨**
 
-****`Auto Rename Tag` 여는태그 고치면 닫는 태그도 고쳐줌**
+- **`Auto Rename Tag` 여는태그 고치면 닫는 태그도 고쳐줌**
