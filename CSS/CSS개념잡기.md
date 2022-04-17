@@ -255,9 +255,9 @@ div { background-color : blue; }
     
 - 부모간 - 포지션으로 위치고정으로 해결, 부모에 border선을 만들서어 브라우저에게 위치 인식 시킴
 부모간의 margin 병합 부모는 margin값이 없지만 자식 margin값이 적용됨
-    
+ 	   
    ![margin병합_-부모0](https://user-images.githubusercontent.com/83447120/163708701-23990986-2bac-454c-8e5c-db936f00435f.jpg)
-    
+ 	   
     ```html
     <style>
     .marginParents {
