@@ -11,6 +11,7 @@ cpu - alu(수학전 연산) + 레지스터(캐쉬멤모리)
 디스크 - 
 
 i/o  
+참조 https://www.youtube.com/watch?v=BylAwbVlTxA&list=PLXvgR_grOs1BQCziQ_MpM877BdBxwbMzA&index=4
 
 개발자 → 컴파일 → exe  → 디스크 저장 ← 코드 + 리소스
 
