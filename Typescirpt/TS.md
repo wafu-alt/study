@@ -19,7 +19,3 @@
 - Null
 - Undefined
 - Never
-
-- 1
-    
-    222
