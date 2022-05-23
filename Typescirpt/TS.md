@@ -186,7 +186,7 @@ OOP란 Object-oriented programming의 준말로 컴퓨터 프로그램을 객체
 
 하위 클래스는 상위 클래스의 기능(메소드)을 확장합니다. 예를 들어 사람 클래스에 움직이는 기능이 있었다면, 어른과 노인 모두 똑같이 움직이는 기능을 확장하여 사용합니다. 다만, 둘의 움직이는 속도를 다르게 하는 등 세부적으로 변경하여 사용합니다.
 
-### ** Getters & Setters / readonly / static**
+### Getters & Setters / readonly / static
 
 **getters & setters**비공개로 설정하려는 속성은 private로 설정하여 직접 호출하거나 수정하지 않습니다. 대신 getter / setter 함수를 사용합니다.
 
