@@ -285,3 +285,19 @@ class Queue<T> {
 }
 
 ```
+### 3. Union type
+
+유니온(Union) 타입은 어떤 타입이 올 지 경우의 수를 고려하여 타입을 명시하는 것으로 **`|`**를 이용해 선언합니다. 제네릭과 마찬가지로 유니온 타입을 이용하여 여러 가지 타입을 다룰 수 있습니다.
+
+하지만 유니온 타입의 리턴 값은 사용된 하나의 타입이 아니라 선언된 전체 유니온 타입으로 지정이 되며, 유니온 타입에서 선언한 타입들의 공통된 메소드만 사용할 수 있습니다. 예를 들어, **`printMessage`**의 경우, string과 number를 포함한 유니온 타입이기 때문에 string에서만 사용 가능한 **`length`** 메소드를 사용할 수 없습니다.
+
+```
+const printMessage = (message: string | number) => {
+  return message;
+}
+const message1 = printMessage(1234);
+const message2 = printMessage("hello world!");
+
+message2.length;
+
+```
