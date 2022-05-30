@@ -323,3 +323,35 @@ const getProperty = <T extends object, U extends keyof T>(obj: T, key: U) => {
 }
 
 ```
+
+
+
+### 5. 디자인 패턴 (Factory Pattern with Generics)
+
+팩토리 패턴(Factory Pattern)이란 객체를 생성하는 인터페이스만 미리 정의하고, 인스턴스를 만드는 것을 서브 클래스가 하는 패턴입니다. 여러 개의 서브 클래스를 가진 슈퍼 클래스가 있을 때, 입력에 따라 하나의 서브 클래스의 인스턴스를 반환합니다.
+
+예를 들어 **`Car`** 인터페이스를 **`implements`**하는 **`Bus`** 클래스와 **`Taxi`** 클래스가 있다고 가정합니다. 만약 인스턴스를 생성하는 **`CarFactory`** 클래스가 있다고 할 때, 아래처럼 작성하는 경우 타입이 추가될 때마다 **`getInstance`** 메소드에서 직접 코드를 추가해야 합니다.
+
+```
+class CarFactory {
+  static getInstance(type: String): Car {
+    switch (type) {
+      case "bus":
+        return new Bus();
+      default:
+        return new Taxi();
+    }
+  }
+}
+
+```
+
+하지만 제너릭을 이용해 **`getInstance`** 메소드가 여러 서브 클래스를 타입으로 가질 수 있게, 즉 타입을 반환만 할 수 있게 만들고 타입을 넘겨주도록 작성한다면 새로운 타입이 추가되어도 **`getInstance`**를 수정할 필요가 없게 됩니다.
+
+```
+class CarFactory {
+  static getInstance<T extends Car>(type: { new (): T }): T {
+    return new type();
+  }
+}
+```
