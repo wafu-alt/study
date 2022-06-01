@@ -384,3 +384,49 @@ type Human = {
 type alias는 인터페이스와 비슷한 역할을 하지만, type alias는 확장(**`extends`**)가 불가능하고 인터페이스는 확장이 가능합니다. 따라서 웬만하면 인터페이스를 사용하는 것이 좋습니다. 인터페이스의 확장에 대해서는 뒤에서 학습할 예정입니다.
 
 인터페이스는 객체나 함수의 스펙, 배열의 접근 방식, 클래스 같은 범주에 대해 계약을 정의할 수 있습니다. 예를 들어 아래와 같은 인터페이스가 있다고 가정할 때 각각의 인터페이스 사용 예시를 살펴보세요.
+
+
+
+```
+interface Person {
+    name: string
+}
+
+```
+
+- 변수
+    
+    ```
+    let elice: Person = {name: "rabbit"};
+    
+    ```
+    
+- 함수
+    
+    ```
+    function greeting(person: Person): void {
+        console.log(`Hello ${person.name}`);
+    }
+    
+    ```
+    
+- 클래스
+    
+    ```
+    class Member implements Person {
+        constructor (
+            public name: string
+        ) { }
+    }
+    
+    ```
+    
+- 배열의 경우 아래와 같이 인터페이스를 이용할 수 있습니다.
+    
+    ```
+    interface Person {
+        [index: number]: string;
+    }
+    let people: Person = ["rabbit", "cheshire", "queen"];
+    
+    ```
