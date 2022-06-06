@@ -477,3 +477,14 @@ interface Point {
     }
     
     ```
+- 인터페이스 확장 : 클래스와 마찬가지로 인터페이스도 인터페이스 간의 확장이 가능합니다. 확장을 위해서는 **`extends`** 키워드를 사용합니다. **`Dog`** 인터페이스에서 **`Animal`** 인터페이스를 확장하고 있습니다.
+    
+    ```
+    interface Animal {
+        makeSound(): void
+    }
+    interface Dog extends Animal {
+        speed: number
+    }
+    
+    ```
