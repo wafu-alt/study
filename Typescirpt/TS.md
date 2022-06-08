@@ -509,8 +509,8 @@ interface Point {
     ```
     
     
-    
-  ### **4. 디자인 패턴 (Strategy pattern)**
+
+### **4. 디자인 패턴 (Strategy pattern)**
 
 전략 패턴(Strategy pattern)이란 객체가 할 수 있는 행위들을 전략으로 만들어 두고, 동적으로 행위의 수정이 필요한 경우 전략만 수정이 가능하도록 만든 패턴입니다.
 
