@@ -488,3 +488,22 @@ interface Point {
     }
     
     ```
+    
+
+    
+- 하이브리드 타입 : 자바스크립트의 유연하고 동적인 타입 특성에 따라 인터페이스에서 여러 가지 타입을 조합해서 사용할 수 있습니다. 예를 들어 함수 타입이면서 동시에 객체 타입을 정의할 수 있는 인터페이스를 만들 수 있습니다. 아래는 **`Counter`** 인터페이스는 함수로서 호출도 가능하고, 여러 프로퍼티도 가지고 있습니다.**`getCounter()`** 함수에 나오는 **`as`**는 타입 단언을 위한 문법으로, 말 그대로 타입을 컴파일러가 추론하지 않도록 프로그래머가 직접 지정하는 것입니다.
+    
+    ```
+    interface Counter {
+        (start: number): string;
+        interval: number;
+        reset(): void;
+    }
+    function getCounter(): Counter {
+        let counter = function (start: number) {} as Counter;
+        counter.interval = 123;
+        counter.reset = function () {};
+        return counter;
+    }
+    
+    ```
