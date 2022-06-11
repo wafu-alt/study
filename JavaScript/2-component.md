@@ -28,3 +28,54 @@
 - html에서 타입 모듈 설정 중요!
 
 참조 : 01-02
+## 컴포넌트화 해보자 (모듈화)
+
+참조 : \code\01-02\1 , 완성은 \code\practice-01
+
+1. components폴더 만들기
+2. header, mian, footer 로 나눌 것임
+3. 각 header, mian, footer .js만들고 그 안에 html을 잘라내서 붙임
+
+```jsx
+//js 다른 main. footer.js도 같은 형태
+const htmlStr = `
+<header>
+    <nav>
+    <ul>
+        <li class="menu-btn"><a href="#">홈</a></li>
+        <li class="menu-btn"><a href="#">이력서</a></li>
+        <li class="nav-space"></li>
+        <li>/*elice*/</li>
+    </ul>
+    </nav>
+</header>
+`;
+
+let ex1 = "ex1";
+export { ex1 }; // 섞어서 불러올 수 있음
+//import Header,{ex1} from "./components/Header.js"; 으로 가져올것
+export default htmlStr;
+```
+
+1. 불러오기
+
+```jsx
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js";
+```
+
+1. reat.js에서는 컴퍼넌트를 어플리케이션으로 봐서 . main.js에서 불러와서 사용
+
+```jsx
+//html
+<div id="app"></div>
+
+//js
+const app = document.getElementById("app");
+app.innerHTML = `
+${Header}
+${Main}
+${Footer}
+`;
+```
