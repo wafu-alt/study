@@ -57,7 +57,7 @@ export { ex1 }; // 섞어서 불러올 수 있음
 export default htmlStr;
 ```
 
-1. 불러오기
+4. 불러오기
 
 ```jsx
 import Header from "./components/Header.js";
@@ -65,7 +65,7 @@ import Main from "./components/Main.js";
 import Footer from "./components/Footer.js";
 ```
 
-1. reat.js에서는 컴퍼넌트를 어플리케이션으로 봐서 . main.js에서 불러와서 사용
+5. reat.js에서는 컴퍼넌트를 어플리케이션으로 봐서 . main.js에서 불러와서 사용
 
 ```jsx
 //html
