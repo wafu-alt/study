@@ -115,3 +115,17 @@ helloBtn.onclick = printHello;
 ```
 
 - 이것말고 더 제한점이 있음
+## Truthy / Falsy
+
+- boolean이 필요할 때, 어떻게 판단하는지 ?
+정의된 값들이 있음
+- Truthy는 Falsy가 아닌 모든 값임
+
+## 객체
+
+참조 :  \code\practice-02
+
+- 객체는 데이터와 함수의 집합
+- 값을 가진 것을 프로퍼티property
+- 함수를 가진 것을 메소드method
+- 객체 리터럴 Object Literal  = 객체 형태를 담은 형태
