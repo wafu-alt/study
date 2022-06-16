@@ -129,3 +129,46 @@ helloBtn.onclick = printHello;
 - 값을 가진 것을 프로퍼티property
 - 함수를 가진 것을 메소드method
 - 객체 리터럴 Object Literal  = 객체 형태를 담은 형태
+
+### for문의 in과 of
+
+```jsx
+for (let i =0; i<myProfile.skill.length; i++) {
+    console.log(myProfile.skill[i];)
+}
+for (let i in myProfile.skill) {
+    console.log(myProfile.skill[i];)
+}
+for (let i of myProfile.skill) {
+    console.log(myProfile.skill[i];)
+}
+```
+
+- in은 i에 대한 배열 수 인덱스 받아옴
+- of은 값의 덩어리를 들고옴
+
+```jsx
+let arr = [5,6,7,8];
+for (let i =0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+
+for (let i in arr) {
+    console.log(`${i} : ${arr[i]}`); // key값 가져옴
+}
+
+//의미적으로 같음
+let arr1 = {
+    0:5,
+    1:6,
+    2:7,
+    3:8,
+};
+
+for (let key in arr1) {
+    console.log(arr[key]); // key값 가져옴
+}
+for (let value of arr1) {
+    console.log(value[i]); // key의 벨류값 가져옴
+}
+```
