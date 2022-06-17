@@ -172,3 +172,31 @@ for (let value of arr1) {
     console.log(value[i]); // key의 벨류값 가져옴
 }
 ```
+## 객체와 const
+
+참조 : \code\05 (오후라서 다시 다운받아서 넣을것)
+
+- const있으면 상수일때 많이 쓰는데 객체일때도 사용한다
+- 메모리에 주소값이고 값에도 주소값이 들어가고 그 주소값을 따라가보면 진짜 값이 있음
+- 객체의 하나에 키 값에 대입으로 바꾸는건 가능
+- 객체 전체에서 값을 바꾸는건 불가
+
+```jsx
+console.log({} === {}); 
+//false 객체 간에 서로 다른 메모리 주소값이라서 같지 않음
+```
+
+## 얇은 복사, 깊은 복사
+
+- 객체인지 주소인지
+
+```jsx
+//객체 얇은 복사
+const newPerson = person;
+newPerson.name = "newPerson";
+console.log(newPerson); 했을때 person내용도 수정이 됨
+
+//객체 깊은 복사
+const deepCopyPerson = JSON,parse(JSON.stringify(person));
+객체를 문자열로 바꾸고 그것을 다시 새로운 객체로 만듦
+```
