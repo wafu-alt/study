@@ -200,3 +200,20 @@ console.log(newPerson); 했을때 person내용도 수정이 됨
 const deepCopyPerson = JSON,parse(JSON.stringify(person));
 객체를 문자열로 바꾸고 그것을 다시 새로운 객체로 만듦
 ```
+## rest / spread   
+- 반복 가능한 객체를 여러개 요소로 펼치거나spread 모아주는rest 방법
+- 배열 혹은 객체 리터럴에서 사용가는 (객체는 ES2018부터)
+
+```jsx
+let arr = [1, 2, 3];
+let newArr = [...arr, 4, 5]; // spread 사용
+//[1,2,3] + [4,5]
+console.log(newArr);
+
+let [a, b, c, d, e] = newArr;
+console.log(a);
+
+let [first, ...rest] = newArr; // rest 사용 destructure
+//첫번째만 가져옴, rest아닌 tmp적어도 가능
+console.log(first);
+```
