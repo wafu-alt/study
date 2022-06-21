@@ -245,3 +245,17 @@ set, get
 super : 부모에 접근
 
 부모의 생성자 호출은 자식 생성자에서만 호출 가능 constructor에서만!
+
+## 예시
+## 1. 변수 재정의
+
+```jsx
+let x = 2; //재정의 o 재선언x
+const y = 2; //재정의 x 재선언x
+
+ x = 4; // 재정의
+//y = 4;
+
+document.write(x);
+document.write(y);
+```
