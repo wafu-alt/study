@@ -259,3 +259,37 @@ const y = 2; //재정의 x 재선언x
 document.write(x);
 document.write(y);
 ```
+## 2. export , import
+
+```jsx
+//named export
+export function add(a,b){};
+export function minus(a,b){};
+export function devide(a,b){};
+import {add, minus, devide} from "./math.js";
+//함수명을 정확히 적어줘야함, 
+add(5,3);
+
+//default export
+export default {add, minus, devide};
+import math from "./math.js"; //이름이 자유로움,중괄호 빠짐
+math.add(5,3);
+
+//export
+export { yuanToWon, yenToWon };
+export function dollarToWon(money){};
+export default euroToWon;
+
+//import
+//import { yuanToWon, yenToWon } from "../exchange/asia.js";
+import * as asiaFunc from "../exchange/asia.js"; //활용 가능
+import {dollarToWon} from "../exchange/dollar.js";
+import euroToWon from "../exchange/euro.js";
+
+// 아래 코드가 수행될 수 있도록 exchange 폴더에서 모듈을 import 하세요.
+console.log(euroToWon(100)); //132987
+console.log(dollarToWon(200)); //244900
+console.log(yuanToWon(300)); //57759
+console.log(yenToWon(400)); //3952.0000000000005
+
+```
