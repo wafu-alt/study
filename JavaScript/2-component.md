@@ -293,3 +293,37 @@ console.log(yuanToWon(300)); //57759
 console.log(yenToWon(400)); //3952.0000000000005
 
 ```
+## 3. 템플릿 리터럴
+
+```jsx
+var learn = '자바스크립트';
+var year = 3;
+
+var sentence = `나는 ${learn}를 ${year}년째 공부중입니다.`;
+document.write(sentence); // 나는 자바스크립트를 3년째 공부중입니다.
+```
+
+## 4. 화살표 함수
+
+```jsx
+//화살표 함수
+const x = (x, y) => x + y;
+/*
+const x = (x, y) => {
+	return x + y;
+}
+*/
+document.write(x(5, 5)); //10
+
+// function으로 변경 (함수표현식)
+const y = function (x, y) {
+	return x+y;
+}
+document.write(y(5, 5)); //10
+
+// 함수 선언식
+function z (x, y) {
+	return x+y;
+}
+document.write(z(5, 5)); //10
+```
