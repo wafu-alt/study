@@ -327,3 +327,79 @@ function z (x, y) {
 }
 document.write(z(5, 5)); //10
 ```
+## 5. 클래스
+
+```jsx
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+let myCar1 = new Car("Ford", 2014); // 오브젝트를 만듦 = 인스턴스
+let myCar2 = new Car("Audi", 2019);
+
+document.write(myCar1.name);
+document.write(myCar1.year);
+document.write("<br>");
+document.write(myCar2.name);
+document.write(myCar2.year);
+```
+
+```jsx
+class Character {
+  constructor(name, ad, ap, hp) {
+    this.name = name;
+    this.ad = ad;
+    this.ap = ap;
+    this.hp = hp;
+  }
+  showInfo() {
+    console.log(`직업 : ${this.name}`);
+    console.log(`공격력 : ${this.ad}`);
+    console.log(`주문력 : ${this.ap}`);
+    console.log(`체력 : ${this.hp}`);
+  }
+
+  adAttack(monster) {
+    console.log(`${this.name}가 ${monster.name}을 ${
+      this.ad
+    } 대미지로 공격 하였습니다.
+    ${monster.name}의 남은 체력: ${monster.hp} -> ${monster.hp - this.ad}`);
+    monster.hp = monster.hp - this.ad;
+  }
+}
+
+//워리어 클래스 만들기
+class Warrior extends Character {
+  constructor(name) {
+    //직업, 공격력, 주문력, 체력
+    super(name, 300, 0, 1000);
+  }
+}
+
+class Monster {
+  constructor(name, hp) {
+    this.name = name;
+    this.hp = hp;
+  }
+  checkHp() {
+    if (this.hp <= 0) {
+      console.log(`${this.name}이 죽었습니다.`);
+    }
+  }
+}
+//몬스터만들기
+const slime = new Monster("슬라임", 700);
+
+//캐릭터 만들기
+const warrior = new Character("전사", 500, 0, 1000);
+warrior.showInfo();
+warrior.adAttack(slime);
+warrior.adAttack(slime);
+slime.checkHp();
+
+//워리어
+const warrior1 = new Warrior("전사1");
+```
