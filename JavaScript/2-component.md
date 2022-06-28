@@ -403,3 +403,49 @@ slime.checkHp();
 //워리어
 const warrior1 = new Warrior("전사1");
 ```
+## 6. forEach()
+
+```jsx
+const arr = [1,2,3,4,5];
+
+// for문을 활용
+for (let i =0; i<arr.length; i++) {
+	console.log(arr[i]); // 1 2 3 4 5
+}
+
+// forEach()활용
+arr.forEach(function(item){
+	console.log(item); // 1 2 3 4 5 
+})
+```
+
+```jsx
+var fruits = ["apple", "orange", "cherry"];
+
+function myFunction(item, index) {
+  document.write(index + ":" + item + "<br>");
+}
+
+for (i = 0; i < 3; i++) {
+  document.write(i);
+  document.write(":" + fruits[i] + "<br>");
+}
+/*
+0:apple
+1:orange
+2:cherry
+*/
+
+// forEach()사용
+fruits.forEach(function(item, idx){
+    document.write(`${idx} : ${item}<br>`);
+})
+/*
+0 : apple
+1 : orange
+2 : cherry
+*/
+
+//한줄로 축약 가능함
+fruits.forEach(myFunction);
+```
