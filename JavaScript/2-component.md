@@ -491,3 +491,21 @@ document.write('<br>');
 let abc = persons.map((item)=>{return item.firstname});
 document.write(abc);
 ```
+- filter()
+
+```jsx
+let arr = [3, 5, 7, 9, 15, 20];
+//5로 나뉘어 떨어지는 원소는? 5 15 20
+let result = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] % 5 === 0) {
+    result.push(arr[i]);
+  }
+}
+
+//item 이름이 변경되어도 상관없음 변수랑 같음
+arr.filter((item ) => {
+  return item % 5 === 0;
+});
+```
