@@ -449,3 +449,45 @@ fruits.forEach(function(item, idx){
 //한줄로 축약 가능함
 fruits.forEach(myFunction);
 ```
+## 7. ****map()****
+
+```jsx
+//map : 배열에 내장되어있는 함수
+
+const arr = [1, 2, 3];
+let result = arr.map((item) => {
+  return item * 2; // 1:[2], 2:[2,4], 3:[2,4,6]
+});
+console.log(result); //2,4,6
+
+//forEach와 비슷하지만 새로운 배열을 돌려줌
+let result = arr.map((item) => { //item, index를 받을 수 있음
+  return item ; 
+});
+console.log(result === arr); //false
+```
+
+```jsx
+var persons = [
+  { firstname: "Malcom", lastname: "Reynolds" },
+  { firstname: "Kaylee", lastname: "Frye" },
+  { firstname: "Jayne", lastname: "Cobb" },
+];
+
+function getFullName(item) {
+  var fullname = item.firstname + " " + item.lastname;
+  return fullname;
+}
+
+document.write(persons.map(getFullName));
+
+document.write("<br>");
+var numbers = [4, 9, 16, 25];
+var x = numbers.map(Math.sqrt);
+//기본함수sqrt제곱근 구함 Math.sqrt(25) = 5
+document.write(x);
+document.write('<br>');
+
+let abc = persons.map((item)=>{return item.firstname});
+document.write(abc);
+```
