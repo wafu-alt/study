@@ -509,3 +509,42 @@ arr.filter((item ) => {
   return item % 5 === 0;
 });
 ```
+
+## 8. ****reduce()****
+
+```jsx
+
+const arr = [3, 5, 7];
+
+//reduce 배열에 내장되어있는 함수
+//새로운 배열을 생성하는것은 아님
+//배열.reduce((누적값, 현잿값, 인덱스, 요소) => { return 결과 }, 초기값);
+let result = arr.reduce((acc, cur) => {
+  console.log(acc, cur);
+  return acc + cur;
+}, 0);
+//15
+//처음은 0,3들어감
+//3,5 들어감
+//8 , 7
+//15를 돌려줌
+//초기값이 0이 아니면 index 1부터 시작함
+```
+
+```jsx
+var numbers = [175, 50, 25];
+
+document.write(numbers.reduce(myFunc));
+
+function myFunc(total, num) {
+  document.write ( Number(total) +"  "+ Number(num) + "<br>");
+  
+  return total - num;
+}
+
+/*
+175 50
+125 25
+100
+*/
+```
