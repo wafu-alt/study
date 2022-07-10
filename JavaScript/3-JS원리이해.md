@@ -107,4 +107,47 @@ ex1();
 
 - 함수 선언(정의)될 때 메모리에 담기는데 scope가 (생성)결정이 됨
 - 스코프의 레퍼런스가 차례로 저장된 리스트
+# 2. 호이스팅과 this
 
+- 실행 컨텍스트는 2단계를 거쳐 수행됨
+1. 생성단계(creation Phase) 
+  scope정보 및 this생성,  메모리 공간을 확보(선언)
+2. 실행단계(Execution Phase)
+ 실제코드가 1줄씩 실행되는 단계, 변수에 값을 할당(할당)
+
+## 호이스팅
+
+- 코드 실행 전, 변수/함수 선언이 해당 스코프의 최상단으로 끌어올려진 것 같은 현상
+- 실행전 : 코드 실행
+- 변수,함수 선언 : 메모리 공간 확보
+
+```jsx
+
+// 1. 함수 선언
+function insertText(text) {
+	document.write(text);
+	return "ok";
+}
+
+// 2. 함수 표현식
+// 함수는 호이스팅 되지않음
+let insertText = function(text) {
+	document.write(text);
+	return "ok";
+}
+//처음 함수선언식과 변수 선언만 호이스팅 되고
+//함수표현식으로 변수의 메모리에 할당됨
+```
+
+```jsx
+let name = "John";
+
+var getName = function() {
+	console.log(name); //undefined
+
+	var name = "Bob"; //let으로 바뀌면 아예 에러남
+	console.log(name); //Bob
+}
+getName ();
+
+```
