@@ -151,3 +151,14 @@ var getName = function() {
 getName ();
 
 ```
+## this가 가리키는 것
+
+1. Global Context - 여기서(브라우저기준) this는window를 의미함 = 웹에서는 브라우저
+2. Function Context - 함수를 호출하는 방법에 따라 달라짐
+
+```jsx
+function example() {
+	return this.a; // window를 가리킴. 함수를 가릴킬순 없음
+}
+window.example() //window는 생략이 가능
+```
