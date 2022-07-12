@@ -162,3 +162,34 @@ function example() {
 }
 window.example() //window는 생략이 가능
 ```
+### bind
+
+```jsx
+let person = {
+	name: "John",
+	hello: function() {
+		console.log(`Hi, ${this.name}`);
+	}
+}
+person.hello(); // Hi, John 
+let newHello = person.hello;
+newHello();//window가리켜서 에러 혹은 무시해서 공백
+
+name = "park";
+newHello();// Hi, park window 네임을 팍을 저장됨
+```
+
+```jsx
+let person = {
+	name: "John",
+	hello: function() {
+		console.log(`Hi, ${this.name}`);
+	}
+}
+let newHello = person.hello;
+newHello = newHello.bind(person);//앞것을 묶어서 복사함
+newHello();// Hi, John 
+
+person.name = "Park";
+newHello(); // Hi, Park
+```
