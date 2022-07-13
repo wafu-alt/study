@@ -193,3 +193,22 @@ newHello();// Hi, John
 person.name = "Park";
 newHello(); // Hi, Park
 ```
+- bind(ES5개념)는 묶어서 계속 연결될 수 있게 함
+
+```jsx
+let person = {
+	name: "John",
+	hello: function() {
+		console.log(`Hi, ${this.name}`);
+	}
+}
+setTimeout(person.hello, 1000); // Hi, 공백
+//1초후 함수 실행
+//실행컨텍스트가 종료되고 함수가 실행됨(window를 가리킴)
+
+//클로저를 활용해서 해결가능
+```
+
+- 1초 후에 실행하기위해 다른 영역에서 보관하다보니 실행컨테스트가 끝나서 빈곳을 가르키게 됨
+- 실행이 쭉 되다가 setTimeout은 따로 실행이되다보니 쭉 실행이 됬을때는 john을 가리키다가. setTimeout이 실행될 차례일때는 john이 사라져서 window를 가리킨다
+- 호이스팅 → 기존 코드 실행 → 이후 후처리 함수 실행
