@@ -212,3 +212,93 @@ setTimeout(person.hello, 1000); // Hi, 공백
 - 1초 후에 실행하기위해 다른 영역에서 보관하다보니 실행컨테스트가 끝나서 빈곳을 가르키게 됨
 - 실행이 쭉 되다가 setTimeout은 따로 실행이되다보니 쭉 실행이 됬을때는 john을 가리키다가. setTimeout이 실행될 차례일때는 john이 사라져서 window를 가리킨다
 - 호이스팅 → 기존 코드 실행 → 이후 후처리 함수 실행
+
+
+# 3. 클로저(Closure) 이해하기
+
+- 함수와 그 함수가 선언 됐을 때의 레시컬(Lexcial) 환경과의 조합
+- 자신이 선언될 당시의 환경을 기억하는 함수 - bind와 비슷한 느낌?
+
+```jsx
+function outer() {
+	let x = 10;
+	let inner = function () {
+			console.log(x);
+		}
+	inner(); //호출
+}
+outer();
+
+// 클로저 사용
+function outer() {
+	let x = 10;
+	let inner = function () {
+		console.log(x);
+	}
+	return inner; //리턴유무 호출하지않고, innerFunc 로 들어감, outer컨텐스트 사라짐
+//outer 컨테스트가 소멸되더라도 메모리는 회수 안되고 inner()은 outer를 계속 참조하고 있음
+//갈비지컬랙터 GC 메모리 회수하는 로직
+}
+let innerFunc = outer(); //함수표현식 ,  innerFunc 로 들어간 후에
+innerFunc(); // 이때 호출되면서 컨텐스트(context)가 쌓임
+```
+
+```jsx
+function clickHandler() {
+  let count = 0; //변수 선언으로 메모리 배당이 되고
+
+  return function () {
+    count++;
+
+    console.log(count);
+  };
+}
+
+const handler = clickHandler();//return되는 count++;,console.log(count);만 남아있음
+//변수count 메모리 배당을 남겨놓고 계속 활용함
+
+let count = 0; //메모리 계속 남아있음 하지만 위에것과 같은 동작함
+//단점 : 다른곳에서 count 변수 못씀
+function clickHandler2 () {
+	 count++;
+   console.log(count);
+}
+
+const countUpBtn = document.querySelector(".count-up-btn");
+countUpBtn.addEventListener("click", handler);
+countUpBtn.addEventListener("click", clickHandler2 );
+```
+
+```jsx
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
+
+function setupHelp() {
+  var helpText = [
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
+  for (var i = 0; i < helpText.length; i++) {
+    var item = helpText[i];
+
+// 문제발생점
+// item이 변경되는 것이 독립적이지 못함
+    document.getElementById(item.id).onfocus = function () {
+      showHelp(item.help); //item부분을 독립적 시켜줘야함
+	
+    };
+	//showhelp를 독립시킴
+	//document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+  }
+}
+
+// function makeHelpCallback(help) {
+// 	return function() {
+// 		showHelp(help);
+// 	};
+// }
+
+setupHelp();
+```
