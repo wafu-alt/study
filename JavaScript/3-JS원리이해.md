@@ -302,3 +302,28 @@ function setupHelp() {
 
 setupHelp();
 ```
+# 4. 고차원함수
+
+- 함수를 인자로 받거나 리턴하는 함수
+- 자바스크립트 대부분 함수가 고차원 함수임
+- 내부적으로 클로저 환경을 쓰고있음
+
+## map() , reduce() - 서로 반대됨
+
+- 배열 중 각각 하나씩 따로 처리하고 다시 합칠 수 있는 함수
+- 활용도가 매우 높고, 원본 값을 변경하지 않는 점이 매우 좋음
+
+```jsx
+let nums = [1,2,3,4,5];
+let result = nums.map(num => num*2); // = function (num) {return num*2;}
+// map이 배열 요소를 하나씩 매개변수로 넘겨줌
+
+let users = [
+	{ id : 1, name : "james' },
+	{ id : 2, name : "james' },
+	{ id : 3, name : "james' },
+];
+let names = users.map(
+	user => user.name;
+);
+```
