@@ -327,3 +327,32 @@ let names = users.map(
 	user => user.name;
 );
 ```
+## reduce함수
+
+- 각 요소를 돌며 누적으로 수행하는 함수
+
+```jsx
+let nums = [1,2,3,4,5];
+const initialValue =0;
+let res nums.reduce(
+	(prevNum , nextNum) => prevNum + nextNum,
+	initialValue
+);
+console.log(res); //15
+
+// reduce 옵션
+let res nums.reduce(
+	(누적값, 현재요소값, 인덱스값, 배열) => 누적값+ 현재요소값,
+	초기값
+);
+```
+
+- map 뭔가를 추출하고, reduce는 추출 된 것을 합친다.
+    
+    예를 들어 wordCount
+    
+    #map은 input : 문장 , 문장을 단어 단위로 쪼개고 count증가 , 반환 : { 단어 : 1 }
+    
+    #reduce input :  { 단어 : 1 }, 같은 단어가 들어오면 count증가, 반환 : 마지막으로 누적된 값
+    
+    ⇒ 특정 단어1 : 20394 , 특정 단어2 : 2948 같은 통계를 얻을 수 있음
