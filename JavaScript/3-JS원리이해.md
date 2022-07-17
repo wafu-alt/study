@@ -356,3 +356,18 @@ let res nums.reduce(
     #reduce input :  { 단어 : 1 }, 같은 단어가 들어오면 count증가, 반환 : 마지막으로 누적된 값
     
     ⇒ 특정 단어1 : 20394 , 특정 단어2 : 2948 같은 통계를 얻을 수 있음
+
+## forEach함수
+
+- for문을 함수 형태로 사용할 수 있음
+- map과 달리 반환값이 없음 , return 넣어도 안됨
+
+```jsx
+let nums = [1,2,3,4,5];
+let res = nums.forEach(num => {
+	if(num ==2) {
+		console.log(num);
+	}
+});
+console.log(res); // undefined
+```
