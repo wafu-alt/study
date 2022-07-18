@@ -371,3 +371,13 @@ let res = nums.forEach(num => {
 });
 console.log(res); // undefined
 ```
+## filter함수
+
+- 각 요소를 돌면서 조건 값이 true인 값만 새 배열에 담아서 반환해줌
+
+```jsx
+let nums = [1,2,3,4,5];
+let res = nums.filter(num => num>2);
+
+console.log(res); // [3,4,5]
+```
