@@ -32,3 +32,17 @@ console.log(echo<boolean>(true));
     ```
     
     - 하지만 **`any`** 타입은 컴파일 시 타입을 체크하지 않기 때문에 입력된 타입에 대한 메소드의 힌트를 사용할 수 없고, 컴파일 시 발견되는 에러를 발견할 수 없게됩니다.
+ ### **2. Generic으로 함수와 클래스 만들기**
+
+- **제네릭을 이용한 함수 생성**앞서 살펴보았듯 꺽쇠(**`<>`**)와 식별자를 입력해 제네릭을 만들 수 있습니다. 다른 예시로 배열을 입력 받아 정렬 후 반환하는 제네릭을 만든다면, 아래와 같이 만들고 사용할 수 있습니다.
+
+```
+function sort<T>(items: T[]): T[] {
+  return items.sort();
+}
+const nums: number[] = [1, 2, 3, 4];
+const chars: string[] = ["a", "b", "c", "d"];
+sort<number>(nums);
+sort<string>(chars);
+
+```
