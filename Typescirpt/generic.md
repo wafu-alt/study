@@ -46,3 +46,20 @@ sort<number>(nums);
 sort<string>(chars);
 
 ```
+- **제네릭을 사용한 클래스 생성**클래스에서는 제네릭을 어떻게 사용하는지 간단한 큐를 구현해보며 살펴보겠습니다. 마찬가지로 클래스 옆에 **`<T>`**를 작성하며, 필드나 메소드에 해당 식별자를 타입으로 명시해주면 됩니다.**`pop()`** 메소드에 있는 **`|`**는 유니온 타입을 사용하기 위한 연산자입니다. 유니온 타입은 명시된 타입 중 하나가 올 수 있다는 것을 나타냅니다. 여기서는 T 타입이 반환되거나, 배열이 빈 경우 undefined가 반환되기 때문에 두 가지를 명시하였습니다.
+
+```
+class Queue<T> {
+
+  protected data: Array<T> = [];
+
+  push(item: T) {
+    this.data.push(item);
+  }
+
+  pop(): T | undefined {
+    return this.data.shift();
+  }
+}
+
+```
