@@ -79,3 +79,22 @@ const message2 = printMessage("hello world!");
 message2.length;
 
 ```
+### **4. 제약조건 (Constraints / keyof)**
+
+제네릭에서 원하지 않는 속성에 접근하는 것을 막기 위해 **`extends`** 키워드를 이용해 제약조건(Constraints)을 사용할 수 있습니다. 아래의 경우 **`printMessage`**의 제네릭 타입으로 string, number 외의 타입이 오는 경우 에러가 발생하게 됩니다.
+
+```
+const printMessage = <T extends string | number>(message: T): T => {
+  return message;
+}
+
+```
+
+**keyof`keyof`**를 이용하면 객체의 키에 제약 조건을 걸 수 있습니다. 아래의 경우 U 타입에 들어오는 값이 T 타입의 키에 포함되어 있지 않다면 에러가 발생하게 됩니다.
+
+```
+const getProperty = <T extends object, U extends keyof T>(obj: T, key: U) => {
+  return obj[key]
+}
+
+```
