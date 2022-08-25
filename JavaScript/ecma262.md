@@ -37,6 +37,23 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - 2009년 5판이 출판을 준비하면서 6판의 집중적인 개발이 시작되었다. 그러나, 이것은 1999년 제3판이 출판되기 전까지 상당한 실험과 언어 향상 디자인 노력이 선행되었다. 매우 현실적인 의미에서, 제6판의 완성은 15년간의 노력의 정점이다. 이 에디션의 목표는 대규모 응용 프로그램, 라이브러리 작성, ECMA스크립트를 다른 언어의 컴파일 대상으로 사용할 수 있도록 더 나은 지원을 제공하는 것이다. 주요 개선 사항 중 일부는 모듈, 클래스 선언, lexical block scoping, iterators 및 generators, 비동기 프로그래밍에 대한 promises, destructuring patterns, proper tail calls을 포함한다. built-ins ECMA스크립트 라이브러리는 지도, 세트, 이진 숫자 값의 배열을 포함한 추가 데이터 추상화뿐만 아니라 문자열과 정규 표현식의 유니코드 보조 문자에 대한 추가 지원을 위해 확장되었다.built-ins은 하위 분류를 통해 확장 가능해졌다. 제6판은 정규적이고 점진적인 언어 및 라이브러리 개선을 위한 기초를 제공한다. 제6판은 2015년 6월 총회에서 채택되었다.
 - ECMA스크립트 2016은 Ecma TC39의 새로운 연간 출시와 오픈 개발 과정으로 출시된 최초의 ECMA스크립트 에디션이다. ECMAScript 2015 소스 문서에서 일반 텍스트 소스 문서는 전적으로 깃허브에서 추가 개발을 위한 기초가 되었다. 이 표준이 개발되는 1년 동안 수천 개의 버그 수정, 편집 수정 및 기타 개선 사항을 나타내는 수백 개의 pull requests과 issues가 접수되었습니다. 또한 Ecmarkup, Ecmarkdown, Grammarkdown을 포함한 수많은 소프트웨어 도구들이 개발되었다. ES2016은 또한 새로운 거듭제곱근 연산자에 대한 지원을 포함하였으며, 포함이라는 새로운 메소드를 Array.protype에 추가하였다.
 - ECMA스크립트 2017은 비동기 함수, Shared Memory, Atomics를 더 작은 언어와 라이브러리 개선, 버그 수정, 편집 업데이트와 함께 도입하였다. 비동기 함수는 약속 반환 함수에 대한 구문을 제공함으로써 비동기 프로그래밍 경험을 향상시킨다. Shared Memory와 Atomics는 병렬 CPU에서도 잘 정의된 실행 순서를 보장하는 Atomics 연산을 사용하여 multi-[agent](https://tc39.es/ecma262/#agent) 프로그램이 통신할 수 있는 새로운 [메모리 모델](https://tc39.es/ecma262/#sec-memory-model)을 도입한다. 또한 오브젝트에 대한 새로운 정적 메서드도 포함되었습니다. Object.values, Object.entries 및 Object.getOwnPropertyDescriptors.
--
+- ECMAScript 2018은 AsyncIterator 프로토콜과 비동기 생성기를 통한 비동기 반복 지원을 도입하였다. 또한 dotAll 플래그, 명명된 캡처 그룹, 유니코드 속성 이스케이프 및 look-behind assertions의 네 가지 새로운 정규 표현 기능을 포함했습니다. 마지막으로 객체 rest과 spread 속성을 포함했습니다.
+- ECMAScript 2019는 널리 구현되었지만 표준이 아닌 String.protype에 대한 더 나은 이름으로 Object.entries의 반환 값을 직접 새로운 개체로 바꾸기 위한 Object.fromEntries, trimStart 및 trimEndonString.protype 등 몇 가지 새로운 내장 기능을 도입했다.**`trimLeft`**및 트림 **`trimRight`**내장. 또한 구문과 의미론에 대한 몇 가지 사소한 업데이트도 포함되어 있었다. 업데이트된 구문에는 선택적 캐치 바인딩 매개 변수가 포함되어 있으며 문자열 리터럴의 U+2028(라인 구분자) 및 U+2029(문단 구분자)가 JSON과 정렬할 수 있습니다. 다른 업데이트에는 해당 Array.protype이 필요합니다.정렬은 안정적인 정렬이어야 하며, JSON.stringify가 입력에 관계없이 잘 형성된 UTF-8을 반환하도록 요구하고, Function.protype.toString이 해당 원본 텍스트 또는 표준 자리 표시자를 반환하도록 요구하여 명확화해야 합니다.
+- 11번째 에디션인 ECMAScript 2020은 글로벌 정규식에 의해 생성된 모든 매치 객체에 대한 반복기, 동적 지정자를 가진 모듈을 비동기적으로 가져오기 위한 구문인 import(), 임의의 정밀 정수로 작업하기 위한 새로운 숫자 원시값 BigInt, Promise를 생성하기 위해 matchAll 메서드를 도입하였다.단락되지 않는 새로운 약속 조합인 **`Promise.allSettled`**; 글로벌이 값은 글로벌하게 이 값에 액세스하는 일반적인 방법입니다. **`export * as ns from 'module`** 문법 전용은 모듈 내에서 사용할 수 있습니다. **for-in**은 입력 순서로 열거합니다. **`import.meta`** 는 모듈들의 모듈 정보를 포함합니다. 두 가지 새로운 구문 기능을 추가하여 "nullish" 값**`null`** or **`undefined`**)으로 작업 개선해서 nullish를 병합해서 값 선택연산자를 향상 시켰습니다. 그리고 함수호출 연산자에 엑세스/호출값 값이 null인 경우 단락시킵니다.
+- 12번째 에디션인 ECMA스크립트 2021은 문자열에 대한 replaceAll 방법을 도입했습니다. **Promise.any는** 입력값이 충족되었을때 종료됩니다. **AggregateError**는 새로운 에러 타입으로 멀티플 에러 종류중 하나입니다. 논리 연산자(**`??=`** , **`&&=`** , **`||=`** ) WeakRef는 가비지 수집에서 대상 개체를 보존하지 않고 참조하기 위한 것이며, FinalizationRegistry는 대상 개체가 가비지 수집될 때 수행되는 정리 작업의 등록 및 등록 취소 관리를 위한 것입니다. 숫자 리터럴의 구분 기호(1_000); 그리고 Array.prototype.sort가 더 정확해져서 구현에서 정의한 정렬 순서([implementation-defined](https://tc39.es/ecma262/#implementation-defined)  [sort order](https://tc39.es/ecma262/#sort-order).)를 초래하는 경우의 수를 줄였습니다.
+- 13번째 에디션인 ECMAScript 2022는 최상위 수준의 모듈에서 키워드를 사용할 수 있도록 하는 최상위 수준 **await**을 \***\*도입했습니다. 새로운 클래스 요소: 공개 및 비공개 인스턴스 필드, 공개 및 비공개 정적 필드, 비공개 인스턴스 메서드 및 접근자, 비공개 정적 메서드 및 접근자 클래스 내부의 정적 블록, 클래스별로 평가 초기화 수행합니다. **#x in obj\*\* 문법은 개체에 일치하는 하위 문자열에 대한 시작 및 끝 인덱스를 제공하는 /d 플래그를 통한 정규 표현식 일치 인덱스 개인 필드가 있는지 테스트합니다, 이유는 오류 개체 속성에서 오류의 인과 관계를 기록하는 데 사용할 수 있습니다. 상대 인덱싱을 허용하는 Strings, Arrays 및 TypedArrays용 메서드 및 개체.hasOwn은 Object.protype.hasOwnProperty의 편리한 대안입니다.
+- 많은 조직을 대표하는 수십 명의 개인들이 Ecma TC39 내에서 이 판의 개발과 이전 판에 매우 중요한 기여를 했다. 또한 TC39의 ECMA스크립트 노력을 지원하는 활기찬 커뮤니티가 등장했다. 이 커뮤니티는 수많은 초안을 검토하고, 수천 개의 버그 보고서를 제출했으며, 구현 실험을 수행했으며, 테스트 케이스에 기여했으며, ECMAScript에 대해 전 세계 개발자 커뮤니티에 교육했습니다. 불행하게도, 이 노력에 기여한 모든 사람과 단체를 확인하고 인정하는 것은 불가능하다.
+- Allen Wirfs-Brock
+  ECMA-262, Project Editor, 6th Edition
+- Brian Terlson
+  ECMA-262, Project Editor, 7th through 10th Editions
+- Jordan Harband
+  ECMA-262, Project Editor, 10th through 12th Editions
 
-ECMAScript 2018 introduced support for asynchronous iteration via the AsyncIterator protocol and async generators. It also included four new regular expression features: the **`dotAll`** flag, named capture groups, Unicode property escapes, and look-behind assertions. Lastly it included object rest and spread properties.
+# 1 범위(**Scope**)
+
+- 이 표준은 ECMA스크립트 2023 범용 프로그래밍 언어를 정의한다.
+
+# 2 적합성(**Conformance)**
+
+-
