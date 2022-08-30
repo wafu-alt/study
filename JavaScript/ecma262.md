@@ -60,3 +60,11 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - ECMA스크립트의 구현은 최신 버전의 유니코드 표준과 ISO/IEC 10646에 따라 소스 텍스트 입력을 해석해야 한다.
 - 서로 다른 인간 언어와 국가가 사용하는 언어 및 문화 관습에 적응해야 하는 프로그램을 지원하는 애플리케이션 프로그래밍 인터페이스(API)를 제공하는 ECMA 스크립트의 적합성 구현은 이 규격과 호환되는 최신 버전의 ECMA-402에 의해 정의된 인터페이스를 구현해야 한다.
 - ECMAScript의 적합한 구현은 본 명세서에 설명된 것 이상의 추가적인 types, values, objects, properties 및 functions을 제공할 수 있다. 특히 ECMA스크립트의 적합한 구현은 본 명세서에서 설명되지 않은 특성 및 본 명세서에서 설명되는 객체에 대한 이러한 특성 값을 제공할 수 있다.
+- ECMAScript의 적합한 구현은 본 명세서에서 설명되지 않은 프로그램 및 정규 표현 구문을 지원할 수 있다. 특히 ECMA스크립트의 적합성 구현은 이 규격의 하위 절 [12.7.2](https://tc39.es/ecma262/#sec-keywords-and-reserved-words)에 명시된 "미래 예약 단어(future [reserved words](https://tc39.es/ecma262/#sec-keywords-and-reserved-words))"를 사용하는 프로그램 구문을 지원할 수 있다.
+- ECMA스크립트의 적합 구현은 하위조항 [17.1](https://tc39.es/ecma262/#sec-forbidden-extensions)에 금지된 확장으로 나열된 확장을 구현해서는 안 된다.
+- ECMAScript의 적합한 구현은 구현 정의([implementation-defined](https://tc39.es/ecma262/#implementation-defined)), 구현 근사([implementation-approximated](https://tc39.es/ecma262/#implementation-approximated)) 또는 호스트 정의([host-defined](https://tc39.es/ecma262/#host-defined))되지 않은 모든 기능을 재정의해서는 안 됩니다.
+- ECMA 스크립트의 적합한 구현은 규범적 선택적 하위 조항(Normative Optional subclauses)의 구현 여부를 선택할 수 있다. 표준 선택(Normative Optional) 동작이 구현되는 경우, 포함된 표준 선택 조항의 모든 동작이 구현되어야 합니다. 본 명세서에서 표준 선택 조항은 아래와 같이 색상 상자에 "표준 선택(Normative Optional)"이라는 단어로 표시된다.
+
+> [NORMATIVE OPTIONAL](https://tc39.es/ecma262/#sec-conformance)(규범적 선택)
+> 2.1 규범적 선택 조항 표제 예
+> 예시 조항 내용
