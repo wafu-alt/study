@@ -68,3 +68,24 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 > [NORMATIVE OPTIONAL](https://tc39.es/ecma262/#sec-conformance)(규범적 선택)
 > 2.1 규범적 선택 조항 표제 예
 > 예시 조항 내용
+
+- ECMA스크립트의 적합한 구현은 표준 선택(Normative Optional) 사항으로 표시되지 않는 한 레거시(Legacy) 하위 절을 구현해야 합니다. 레거시 하위 조항에 지정된 모든 언어 특징 및 동작은 하나 이상의 바람직하지 않은 특성을 갖는다. 그러나 기존 응용 프로그램에서 계속 사용되므로 이 규격에서 제거할 수 없습니다. 이러한 기능은 핵심 ECMA스크립트 언어의 일부로 간주되지 않습니다. 프로그래머는 새로운 ECMA스크립트 코드를 작성할 때 이러한 특징과 동작이 존재한다고 가정하거나 사용해서는 안 된다.
+
+> [LEGACY](https://tc39.es/ecma262/#sec-conformance)
+> 2.2 레거시 조항 제목의 예
+
+> [NORMATIVE OPTIONAL](https://tc39.es/ecma262/#sec-conformance), [LEGACY](https://tc39.es/ecma262/#sec-conformance)(규범적 선택, 레거시)
+> 2.3 레거시 규범적 선택적 조항 표제 예
+
+# 3 규범적 참조(**Normative References)**
+
+- 다음 참조 문서는 이 문서의 적용에 필수적이다. 날짜가 적힌 참고문헌의 경우 인용된 판만 적용된다. 날짜가 없는 참조의 경우 참조 문서의 최신판(수정사항 포함)이 적용된다.
+- ISO/IEC 10646 정보 기술 — Universal Multiple-Octet Coded Character Set(UCS) + 수정판 1:2005, 수정판 2:2006, 수정판 3:2008 및 수정판 4:2008 및 추가 수정판 및 수정판 또는 후속판
+- ECMA-402, _ECMAScript 2015 국제화 API 사양._
+  [https://ecma-international.org/publications/standards/Ecma-402.htm](https://ecma-international.org/publications/standards/Ecma-402.htm)
+- ECMA-404, JSON 데이터 교환 형식.
+  \*\*[https://ecma-international.org/publications/standards/Ecma-404.htm](https://ecma-international.org/publications/standards/Ecma-404.htm)
+
+# 4 개요
+
+- 이 섹션에는 ECMAScript 언어에 대한 비표준 개요가 포함되어 있다.
