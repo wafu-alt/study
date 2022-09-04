@@ -103,3 +103,4 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ## 4.2 호스트 및 구현
 
 - ECMAScript를 호스트 환경에 통합하는 것을 돕기 위해 이 사양은 전체 또는 부분적으로 특정 기능(예: 추상 작업 e.g., [abstract operations](https://tc39.es/ecma262/#sec-algorithm-conventions-abstract-operations))에 대한 정의를 이 사양 외부의 소스로 미루고 있다. 편집상 이 사양은 다음과 같은 종류의 연기를 구분한다.
+- 구현은 부록 [D](https://tc39.es/ecma262/#sec-host-layering-points)에 열거된 시설이나 구현 정의([implementation-defined](https://tc39.es/ecma262/#implementation-defined)) 또는 구현 근사치([implementation-approximated](https://tc39.es/ecma262/#implementation-approximated))로 표시된 시설을 추가로 정의하는 외부 소스이다. 비공식적인 사용에서 구현은 특정 웹 브라우저와 같은 구체적인 인위구조(concrete artefact,)를 의미한다.
