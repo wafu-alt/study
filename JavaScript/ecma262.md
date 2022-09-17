@@ -110,4 +110,6 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - 호스트 후크는 외부 소스에 의해 전체 또는 부분적으로 정의되는 추상 작업이다. 모든 호스트 후크([host hooks](https://tc39.es/ecma262/#host-hook))는 부록 [D](https://tc39.es/ecma262/#sec-host-layering-points)에 나열되어야 한다. 호스트 후크는 최소한 다음 요구 사항을 준수해야 한다.
   - 일반 완료([normal completion](https://tc39.es/ecma262/#sec-completion-record-specification-type)) 또는 throw 완료([hrow completion](https://tc39.es/ecma262/#sec-completion-record-specification-type))를 반환해야 한다.
 - 호스트 정의([host-defined](https://tc39.es/ecma262/#host-defined)) 기능은 추가 자격 없이 외부 소스에 대한 정의를 연기하는 기능이며 부록 D에 열거되어 있다. 호스트가 아닌 구현에서도 호스트 정의 기능에 대한 정의를 제공할 수도 있다.
--
+- 호스트 환경은 모든 호스트 정의 기능에 대한 특정 정의 선택 항목이다. 호스트 환경은 일반적으로 입력을 얻고 출력을 전역 객체(global object)의 호스트 정의 속성으로 제공할 수 있는 객체(object) 또는 함수(function) 기능이 포함한다.
+- 이 사양은 항상 가장 구체적인 용어를 사용하는 편집 규칙을 따른다. 예를 들어, 기능이 호스트 정의([host-defined](https://tc39.es/ecma262/#host-defined))인 경우 구현 정의([implementation-defined](https://tc39.es/ecma262/#implementation-defined))로 지칭해서는 안 됩니다.
+- 호스트([hosts](https://tc39.es/ecma262/#host)) 및 구현체 모두 본 명세서에 정의된 언어(language) 유형, 사양(specification) 유형, 추상 연산([abstract operations](https://tc39.es/ecma262/#sec-algorithm-conventions-abstract-operations)), 문법 생성(grammar productions), 고유 객체(intrinsic objects) 및 고유 기호(intrinsic symbols)를 통해 본 명세서와 인터페이스할 수 있다.
