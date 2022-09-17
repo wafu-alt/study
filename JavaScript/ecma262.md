@@ -100,7 +100,7 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - 웹 서버는 요청, 클라이언트 및 파일을 나타내는 개체와 데이터를 잠그고 공유하는 메커니즘을 포함하여 서버 측 계산을 위한 다른 호스트 환경을 제공한다. 브라우저 측과 서버 측 스크립트를 함께 사용함으로써 웹 기반 애플리케이션을 위한 사용자 인터페이스를 제공하는 동시에 클라이언트와 서버 간에 계산을 분산시킬 수 있다.
 - ECMAScript를 지원하는 각 웹 브라우저와 서버는 자체 호스트 환경을 제공하여 ECMAScript 실행 환경을 완성한다.
 
-## 4.2 호스트 및 구현
+## 4.2 호스트 및 구현(Hosts and Implementations)
 
 - ECMAScript를 호스트 환경에 통합하는 것을 돕기 위해 이 사양은 전체 또는 부분적으로 특정 기능(예: 추상 작업 e.g., [abstract operations](https://tc39.es/ecma262/#sec-algorithm-conventions-abstract-operations))에 대한 정의를 이 사양 외부의 소스로 미루고 있다. 편집상 이 사양은 다음과 같은 종류의 연기를 구분한다.
 - 구현은 부록 [D](https://tc39.es/ecma262/#sec-host-layering-points)에 열거된 시설이나 구현 정의([implementation-defined](https://tc39.es/ecma262/#implementation-defined)) 또는 구현 근사치([implementation-approximated](https://tc39.es/ecma262/#implementation-approximated))로 표시된 시설을 추가로 정의하는 외부 소스이다. 비공식적인 사용에서 구현은 특정 웹 브라우저와 같은 구체적인 인위구조(concrete artefact,)를 의미한다.
@@ -110,3 +110,4 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - 호스트 후크는 외부 소스에 의해 전체 또는 부분적으로 정의되는 추상 작업이다. 모든 호스트 후크([host hooks](https://tc39.es/ecma262/#host-hook))는 부록 [D](https://tc39.es/ecma262/#sec-host-layering-points)에 나열되어야 한다. 호스트 후크는 최소한 다음 요구 사항을 준수해야 한다.
   - 일반 완료([normal completion](https://tc39.es/ecma262/#sec-completion-record-specification-type)) 또는 throw 완료([hrow completion](https://tc39.es/ecma262/#sec-completion-record-specification-type))를 반환해야 한다.
 - 호스트 정의([host-defined](https://tc39.es/ecma262/#host-defined)) 기능은 추가 자격 없이 외부 소스에 대한 정의를 연기하는 기능이며 부록 D에 열거되어 있다. 호스트가 아닌 구현에서도 호스트 정의 기능에 대한 정의를 제공할 수도 있다.
+-
