@@ -117,4 +117,4 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ## 4.3 ECMAScript 개요
 
 - 다음은 ECMA스크립트의 비공식적인 개요이다. 언어의 모든 부분이 설명되지않는다. 이 개요는 표준 사양의 일부가 아니다.
-- ECMAScript는 객체 기반이다. 기본 언어와 호스트 기능은 객체에 의해 제공되며 ECMAScript 프로그램은 통신 객체의 클러스터(무리, 떼)입니다. ECMAScript에서 개체는 각 속성을 사용할 수 있는 방법을 결정하는 속성을 가진 0개 또는 이상의 속성(property) 집합입이다. 예를 들어 속성에 대한 쓰기 가능 속성(Writable attribute)이 false로 설정되면, 실행된 ECMAScript 코드가 속성에 다른 값을 할당하려고 하면 실패한다.
+- ECMAScript는 객체 기반이다. 기본 언어와 호스트 기능은 객체에 의해 제공되며 ECMAScript 프로그램은 통신 객체의 클러스터(무리, 떼)입니다. ECMAScript에서 개체는 각 속성을 사용할 수 있는 방법을 결정하는 속성을 가진 0개 또는 이상의 속성(property) 집합입이다. 예를 들어 속성에 대한 쓰기 가능 속성(Writable attribute)이 false로 설정되면, 실행된 ECMAScript 코드가 속성에 다른 값을 할당하려고 하면 실패한다. 속성(Properties)은 다른 개체, 기본(primitive) 값 또는 함수를 포함하는 컨테이너이다. 기본(primitive) 값은 다음 내장 유형 중 하나이다. Undefined, Null, Boolean, Number, BigInt, String 및 \*\*\*\*Symbol. 개체는 기본 제공 유형의 객체(Object)이고 함수로 호출 가능한 객체이다. 속성을 통해 객체와 연관된 함수를 메서드라고 한다.
