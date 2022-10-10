@@ -139,3 +139,31 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - ECMA스크립트 언어는 일부 사용자가 언어에서 사용할 수 있는 일부 기능 사용을 제한 할 수 있다고 인식한다. 보안을 위해, 오류가 발생하기 쉬운 기능을 회피하거나, 오류 검사를 강화하거나, 선택한 다른 이유로 그렇게 할 수 있다. 이 가능성을 뒷받침하기 위해 ECMA스크립트는 언어의 엄격한 변형을 정의한다. 언어의 엄격한 변형은 일반 ECMA스크립트 언어의 일부 특정한 구문 및 의미적 기능을 배제하고 일부 기능의 세부 의미를 수정한다. 엄격한 변형은 또한 언어의 엄격하지 않은 언어 형식에서 오류로 지정되지 않은 상황에서 오류 예외를 발생시켜 보고해야 하는 추가 오류 조건을 명시한다.
 - ECMA스크립트의 엄격한 변형은 일반적으로 언어의 엄격한 모드(_strict mode_)라고 불린다. ECMA스크립트의 엄격한 모드(strict mode) 문법 및 의미체계의 사용은 [11.2.2](https://tc39.es/ecma262/#sec-strict-mode-code)에 설명된 개별 [ECMAScript source text](https://tc39.es/ecma262/#sec-source-text) 단위 수준에서 명시적으로 이루어진다. 엄밀한 모드는 문법 소스 텍스트 단위 수준에서 선택되기 때문에 엄밀한 모드는 그러한 소스 텍스트 단위 내에서 로컬 효과가 있는 제한만 부과한다. 엄격한 모드는 여러 소스 텍스트 단위에서 일관되게 작동해야 하는 ECMA스크립트 의미체계의 어떤 측면도 제한하거나 수정하지 않는다. 완전한 ECMA스크립트 프로그램은 엄격한 모드와 비 엄격한 모드 [ECMAScript source text](https://tc39.es/ecma262/#sec-source-text)단위로 구성될 수 있다. 이 경우 엄격한 모드는 엄격한 모드 소스 텍스트 단위 내에 정의된 코드를 실제로 실행할 때만 적용된다.
 - 이 사양을 준수하기 위해 ECMA스크립트 구현은 제한되지 않는 전체 ECMA스크립트 언어와 이 사양에 정의된 ECMA스크립트 언어의 엄격한 변형을 모두 구현해야 한다. 또한, 구현은 제한되지 않는 모드와 엄격한 모드의 소스 텍스트 단위를 단일 복합 프로그램(single composite program)으로 결합하는 것을 지원해야 한다.
+
+## 4.4 용어 및 정의 (Terms and Definitions)
+
+- 이 문서의 목적상 다음 용어와 정의가 적용된다.
+
+### 4.4.1 구현 근사 (implementation-approximated)
+
+- 구현 근사([implementation-approximated](https://tc39.es/ecma262/#implementation-approximated)) 기능은 외부 소스에 의해 전체 또는 부분적으로 정의되지만 이 규격에서 권장되는 이상적인 동작을 가지고 있다.
+
+### 4.4.2 구현 정의 (**implementation-defined)**
+
+- 구현 정의 기능([implementation-defined](https://tc39.es/ecma262/#implementation-defined))은 이 규격의 외부 소스에 의해 전체 또는 부분적으로 정의된다.
+
+### 4.4.3 호스트 정의 (host-defined)
+
+- **구현 정의(**[implementation-defined](https://tc39.es/ecma262/#implementation-defined)**)와 동일**
+
+> 편집상 [4.2](https://tc39.es/ecma262/#sec-hosts-and-implementations)항에 해당
+
+### 4.4.4 타입 (Type)
+
+- [6](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)항에 정의된 데이터 값 집합
+
+### 4.4.5 원시값 (**primitive value)**
+
+- [6](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)항에서 정의된 Undefined, Null, Boolean, Number, BigInt, Symbol 또는 String 유형 중 하나의 멤버
+
+> 원시 값은 언어 구현의 가장 낮은 수준에서 직접 표현되는 기준이다.
