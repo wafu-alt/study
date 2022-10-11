@@ -167,3 +167,9 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - [6](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)항에서 정의된 Undefined, Null, Boolean, Number, BigInt, Symbol 또는 String 유형 중 하나의 멤버
 
 > 원시 값은 언어 구현의 가장 낮은 수준에서 직접 표현되는 기준이다.
+
+### 4.4.6 객체 (Object)
+
+- 객체 유형의 멤버
+
+> 객체는 속성의 집합이며 단일 프로토타입 객체를 가지고 있다. 프로토타입이 null일 수 있다.
