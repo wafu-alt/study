@@ -174,4 +174,34 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 
 > 객체는 속성의 집합이며 단일 프로토타입 객체를 가지고 있다. 프로토타입이 null일 수 있다.
 
-### 4.4.7
+### 4.4.7 생성자 (constructor)
+
+- 객체를 생성하고 초기화하는 함수 객체([function object](https://tc39.es/ecma262/#function-object))
+
+> 생성자의 "prototype" 속성 값은 상속 및 공유 속성을 구현하는 데 사용되는 프로토타입 개체이다.
+
+### 4.4.8 프로토타입 (**prototype**)
+
+- **다른 객체에 대한 공유 속성을 제공하는 객체**
+
+> 생성자가 객체를 만들 때 해당 개체는 속성 참조를 해결하기 위해 생성자의 "prototype" 속성을 암묵적으로 참조한다. 생성자의 "protype" 속성은 프로그램 표현식 constructor.protype에 의해 참조될 수 있으며 객체의 프로토타입에 추가된 속성은 상속을 통해 프로토타입을 공유하는 모든 객체에 의해 공유된다. 또는 Object.create 내장 함수를 사용하여 명시적으로 지정된 프로토타입으로 새 객체를 만들 수 있다.
+
+### 4.4.9 보통 객체 (**ordinary object**)
+
+- 모든 객체가 지원해야 하는 필수 내부 메서드에 대한 기본 동작을 갖는 객체
+
+### 4.4.10 예외적인 객체 (exotic object)
+
+- 하나 이상의 필수 내부 메소드에 대한 기본 동작이 없는 객체
+
+> 보통 객체([ordinary object](https://tc39.es/ecma262/#ordinary-object))가 아니면 이국적인 객체([exotic object](https://tc39.es/ecma262/#exotic-object))이다.
+
+### 4.4.11 기준 객체 (standard object)
+
+- **이 규격에 의해 의미론(semantics)이 정의된 객체**
+
+### 4.4.12 내장 객체 (built-in object)
+
+- ECMA스크립트 구현에 지정되고 제공된 객체
+
+> 표준 내장 객체는 이 규격에 정의되어 있다. ECMA스크립트 구현은 추가적인 종류의 내장 객체를 지정하고 제공할 수 있다. 기본 생성자(_[constructor](https://tc39.es/ecma262/#constructor)_)는 생성자(_[constructor](https://tc39.es/ecma262/#constructor)_)인 내장 객체입니다.
