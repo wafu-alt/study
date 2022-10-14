@@ -221,3 +221,15 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.16 빈 타입 (**Null type)**
 
 - 유일한 값이 null 값인 타입
+
+### 4.4.17 불린 값 (**Boolean value**)
+
+- 불린 타입([Boolean type](https://tc39.es/ecma262/#sec-ecmascript-language-types-boolean-type))의 종류
+
+> 불린 값은 true와 false 두 개뿐이다.
+
+### 4.4.19 불린 객체 (**Boolean object)**
+
+- 표준 내장 불린 생성자([constructor](https://tc39.es/ecma262/#constructor))의 사례에 객체 타입의 종류다
+
+> 불린 객체는 불린 값을 인수(argument)로 제공하여 새 표현식에서 불린 생성자를 사용하여 생성한다. 결과 객체에 불린 값의 내부 슬롯이 있다. 불린 객체는 불린 값으로 강제변환 할 수 있다.
