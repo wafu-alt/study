@@ -233,3 +233,7 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - 표준 내장 불린 생성자([constructor](https://tc39.es/ecma262/#constructor))의 사례에 객체 타입의 종류다
 
 > 불린 객체는 불린 값을 인수(argument)로 제공하여 새 표현식에서 불린 생성자를 사용하여 생성한다. 결과 객체에 불린 값의 내부 슬롯이 있다. 불린 객체는 불린 값으로 강제변환 할 수 있다.
+
+### 4.4.20 문자열 값 (String value)
+
+- 0 또는 그 이상의 16비트 부호 없는 정수([integer](https://tc39.es/ecma262/#integer)) 값의 유한한([finite](https://tc39.es/ecma262/#finite)) 순서 시퀀스인 원시 값
