@@ -237,3 +237,32 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.20 문자열 값 (String value)
 
 - 0 또는 그 이상의 16비트 부호 없는 정수([integer](https://tc39.es/ecma262/#integer)) 값의 유한한([finite](https://tc39.es/ecma262/#finite)) 순서 시퀀스인 원시 값
+  > String 값은 String 타입([String type](https://tc39.es/ecma262/#sec-ecmascript-language-types-string-type))의 멤버입니다. 시퀀스의 각 정수 값은 일반적으로 UTF-16 텍스트의 단일 16비트 단위를 나타낸다. 그러나 ECMAScript는 값이 16비트 부호 없는 정수여야 한다는 점을 제외하고는 값에 제한이나 요구 사항을 두지 않는다.
+
+### 4.4.21 문자열 타입 (**String type)**
+
+- **가능한 모든 문자열 값 집합**
+
+### 4.4.22 문자열 객체 (**String object)**
+
+- 표준 내장 String 생성자([constructor](https://tc39.es/ecma262/#constructor))의 사례인 Object 타입의 멤버
+
+> String 객체는 String 값을 인수(argument)로 제공하여 새 표현식에서 String 생성자를 사용하여 생성한다. 결과 객체에는 값이 문자열 값인 내부 슬롯이 있다. String 객체는 String 생성자를 함수로 호출하여 String 값으로 강제 변환할 수 있습니다([22.1.1.1](https://tc39.es/ecma262/#sec-string-constructor-string-value))
+
+### 4.4.23 숫자 값 (**Number value)**
+
+- 배정밀도(double-precision) 64비트 이진 형식[IEEE 754-2019](https://tc39.es/ecma262/#sec-bibliography) 값에 해당하는 기본 값
+
+### 4.4.24 숫자 타입 (Number type)
+
+- 특별한 "Not-a-Number"(NaN) 값, 양의 무한대 및 음의 무한대를 포함한 모든 숫자 값의 집합
+
+### 4.4.25 숫자 객체 (**Number object)**
+
+- 표준 내장 Number 생성자([constructor](https://tc39.es/ecma262/#constructor))의 인스턴스(instance 사례, 예)인 Object 타입의 멤버
+
+> Number 객체는 새 표현식에서 Number 생성자를 사용하여 생성되고 Number 값을 인수로 제공한다. 결과 개체에는 값이 숫자 값인 내부 슬롯이 있다. Number 객체는 Number 생성자를 함수로 호출하여 Number 값으로 강제 변환할 수 있다([21.1.1.1](https://tc39.es/ecma262/#sec-number-constructor-number-value))
+
+### 4.4.26 무한대 (**Infinity)**
+
+- 양의 무한 숫자 값인 숫자 값
