@@ -266,3 +266,7 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.26 무한대 (**Infinity)**
 
 - 양의 무한 숫자 값인 숫자 값
+
+### 4.4.27 숫자가 아닌 (NaN = Not-a-Number)
+
+- [IEEE 754-2019](https://tc39.es/ecma262/#sec-bibliography) "Not-a-Number" 값인 숫자 값
