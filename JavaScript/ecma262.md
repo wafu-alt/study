@@ -271,6 +271,6 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 
 - [IEEE 754-2019](https://tc39.es/ecma262/#sec-bibliography) "Not-a-Number" 값인 숫자 값
 
-### 4.4.27 큰 수 값(BigInt value)
+### **4.4.28 큰 수 값(BigInt value)**
 
--
+- 임의의 추출한 정수([integer](https://tc39.es/ecma262/#integer)) 값에 해당하는 기본 값
