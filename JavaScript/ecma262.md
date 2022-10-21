@@ -271,6 +271,14 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 
 - [IEEE 754-2019](https://tc39.es/ecma262/#sec-bibliography) "Not-a-Number" 값인 숫자 값
 
-### **4.4.28 큰 수 값(BigInt value)**
+### 4.4.28 큰 수 값(BigInt value)
 
 - 임의의 추출한 정수([integer](https://tc39.es/ecma262/#integer)) 값에 해당하는 기본 값
+
+### 4.4.29 큰 수 타입 (BigInt type)
+
+- 가능한 모든 BigInt 값의 집합
+
+### 4.4.30 큰 수 객체 (**BigInt object**)
+
+- 표준 내장 BigInt 생성자([constructor](https://tc39.es/ecma262/#constructor))의 인스턴스(사례,예)인 Object 유형의 멤버
