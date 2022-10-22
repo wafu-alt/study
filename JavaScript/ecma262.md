@@ -282,3 +282,11 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.30 큰 수 객체 (**BigInt object**)
 
 - 표준 내장 BigInt 생성자([constructor](https://tc39.es/ecma262/#constructor))의 인스턴스(사례,예)인 Object 유형의 멤버
+
+### 4.4.31 기호 값 (**Symbol value)**
+
+- 고유한 비 문자열 객체 속성 키([property key](https://tc39.es/ecma262/#sec-object-type))를 나타내는 기본 값
+
+### 4.4.32 기호 타입 (**Symbol type)**
+
+- **가능한 모든 기호 값 집합**
