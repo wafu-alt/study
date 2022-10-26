@@ -300,3 +300,45 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - 서브루틴으로 호출될 수 있는 Object 유형의 멤버
 
 > 함수에는 속성(properties) 외에도 호출될 때 동작하는 방식을 결정하는 실행 코드와 상태가 포함되어 있다. 함수의 코드는 ECMAScript로 작성되거나 작성되지 않을 수 있다.
+
+### 4.4.35 내장 함수 (**built-in function**)
+
+- 함수인 내장 객체
+
+> 내장 함수의 예로는 parseInt 및 Math.exp가 있다. 호스트([host](https://tc39.es/ecma262/#host)) 또는 구현은 이 명세서에 설명되지 않은 추가 내장 기능을 제공할 수 있다.
+
+### 4.4.36 속성 (property)
+
+- : HTML DOM트리안의 Attribute표현
+    <div class =”divClassName”> → className 의 property는 divClassName 라는 attribute 값을 가진다.
+
+- 키(문자열 값 또는 기호 값)나 값을 연결하는 객체의 일부
+
+> 속성의 형식에 따라 값은 데이터 값(기본값, 객체 또는 함수 객체([function object](https://tc39.es/ecma262/#function-object)))으로 직접 표시되거나 한 쌍의 접근자 함수에 의해 간접적으로 표시될 수 있다.
+
+### 4.4.37 메서드 (**method)**
+
+- 속성의 값인 함수
+
+> 함수가 객체의 메소드(method)로 호출되면 객체는 this 값으로 함수에 전달된다.
+
+### 4.4.38 내장 메서드 (**built-in method)**
+
+- 내장 함수인 메소드
+
+> 표준 내장 메소드는 이 명세서에 정의되어 있다. 호스트 또는 구현([host](https://tc39.es/ecma262/#host))은 이 명세서에 설명되지 않은 추가 내장 메서드를 제공할 수 있다.
+
+### 4.4.39 속성 (**attribute**)
+
+- : HTML 요소의 추가적인 정보
+    <div class =”divClassName”> → class라는 attribute는 값이 divClassName이다. 
+
+- 속성(property)의 어떤 특성을 정의하는 내부 값
+
+### 4.4.40 주? 자체? 속성 (**own property**)
+
+- 객체에 직접 포함된 속성
+
+### 4.4.41 상속 속성 (inherited property)
+
+- 자체(own) 속성은 아니지만 객체 프로토타입의 속성(소유(own) 또는 상속(inherited)됨)인 객체의 속성
