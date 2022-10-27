@@ -331,7 +331,7 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.39 속성 (**attribute**)
 
 - : HTML 요소의 추가적인 정보
-    <div class =”divClassName”> → class라는 attribute는 값이 divClassName이다. 
+    <div class =”divClassName”> → class라는 attribute는 값이 divClassName이다.
 
 - 속성(property)의 어떤 특성을 정의하는 내부 값
 
@@ -342,3 +342,21 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.41 상속 속성 (inherited property)
 
 - 자체(own) 속성은 아니지만 객체 프로토타입의 속성(소유(own) 또는 상속(inherited)됨)인 객체의 속성
+
+## 4.5 이 사양의 구성 (**Organization of This Specification)**
+
+- 이 사양의 나머지 부분은 다음과 같이 구성 :
+  - [5](https://tc39.es/ecma262/#sec-notational-conventions)절은 명세서 전체에서 사용되는 표기법을 정의한다.
+  - [6](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)~[10](https://tc39.es/ecma262/#sec-ordinary-and-exotic-objects-behaviours)절은 ECMAScript 프로그램이 작동하는 실행 환경을 정의한다.
+  - [11](https://tc39.es/ecma262/#sec-ecmascript-language-source-code)~[17](https://tc39.es/ecma262/#sec-error-handling-and-language-extensions)절은 문법 인코딩과 모든 언어 기능의 실행 의미를 포함하여 실제 ECMAScript 프로그래밍 언어를 정의한다.
+  - [18](https://tc39.es/ecma262/#sec-ecmascript-standard-built-in-objects)~[28](https://tc39.es/ecma262/#sec-reflection)절은 ECMAScript 표준 라이브러리를 정의한다. 여기에는 ECMAScript 프로그램이 실행될 때 사용할 수 있는 모든 표준 객체의 정의가 포함된다.
+  - [29](https://tc39.es/ecma262/#sec-memory-model)절은 Atomics(원자) 객체의 SharedArrayBuffer(공유 배열 버퍼) 지원 메모리와 메서드에 대한 액세스의 메모리 일관성 모델을 설명한다.
+
+# 5. 표기법 (Notational Conventions)
+
+## 5.1 구문 및 어휘 문법 (**Syntactic and Lexical Grammars**)
+
+### 5.1.1 문맥 없는 문법 (**Context-Free Grammars**)
+
+- 문맥이 없는 문법은 다수의 제품으로 구성된다. 각 제품은 비단말기라는 추상(abstract) 기호를 왼쪽에 갖고 오른쪽에는 0개 이상의 비단말기와 터미널 기호가 순서대로(sequence)를 있다. 각 문법은 터미널 기호는 지정된 알파벳에서 가져온다(drawn).
+  - [https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)
