@@ -360,3 +360,5 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 
 - 문맥이 없는 문법은 다수의 제품으로 구성된다. 각 제품은 비단말기라는 추상(abstract) 기호를 왼쪽에 갖고 오른쪽에는 0개 이상의 비단말기와 터미널 기호가 순서대로(sequence)를 있다. 각 문법은 터미널 기호는 지정된 알파벳에서 가져온다(drawn).
   - [https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)
+- 체인 제품(chain production)은 0개 이상의 터미널 기호와 함께 오른쪽에 정확히 하나의 비단말 기호가 있는 제품이다.
+- 목표 기호라고 하는 하나의 구별되는 비단말로 구성된 문장에서 시작하여, 주어진 문맥 자유 구문(context-free grammar)은 언어, 즉, 시퀀스(sequences)에서 비단말기를 제품의 오른쪽 면으로 반복적으로 대체함으로써 발생할 수 있는 가능한 (아마도 무한한) 일련의 터미널 기호를 명시한다. 비단자는 왼쪽이다.
