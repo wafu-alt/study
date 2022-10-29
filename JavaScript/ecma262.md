@@ -362,3 +362,7 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
   - [https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)
 - 체인 제품(chain production)은 0개 이상의 터미널 기호와 함께 오른쪽에 정확히 하나의 비단말 기호가 있는 제품이다.
 - 목표 기호라고 하는 하나의 구별되는 비단말로 구성된 문장에서 시작하여, 주어진 문맥 자유 구문(context-free grammar)은 언어, 즉, 시퀀스(sequences)에서 비단말기를 제품의 오른쪽 면으로 반복적으로 대체함으로써 발생할 수 있는 가능한 (아마도 무한한) 일련의 터미널 기호를 명시한다. 비단자는 왼쪽이다.
+
+### 5.1.2 어휘 및 비정규식표현 구문 (**The Lexical and RegExp Grammars**)
+
+- ECMAScript에 대한 어휘 문법은 [12](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)절에 나와 있다. 이 문법은 터미널 기호로 [11.1](https://tc39.es/ecma262/#sec-source-text)에 정의된 SourceCharacter에 대한 규칙을 준수하는 유니코드 코드 포인트를 갖는다. 목표 기호([goal symbol](https://tc39.es/ecma262/#sec-context-free-grammars)) [InputElementDiv](https://tc39.es/ecma262/#prod-InputElementDiv), [InputElementTemplateTail](https://tc39.es/ecma262/#prod-InputElementTemplateTail),  [InputElementRegExp](https://tc39.es/ecma262/#prod-InputElementRegExp), [InputElementRegExpOrTemplateTail](https://tc39.es/ecma262/#prod-InputElementRegExpOrTemplateTail) 또는 [InputElementHashbangOrRegExp](https://tc39.es/ecma262/#prod-InputElementHashbangOrRegExp)에서 시작하여 이러한 코드 포인트의 시퀀스가 입력 요소의 시퀀스로 변환되는 방법을 설명하는 일련의 프로덕션을 정의한다.
