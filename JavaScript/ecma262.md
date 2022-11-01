@@ -370,4 +370,11 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 - ECMAScript에 대한 RegExp(정규표현식) 문법은 [22.2.1](https://tc39.es/ecma262/#sec-patterns)에 나와 있다. 이 문법은 또한 [SourceCharacter](https://tc39.es/ecma262/#prod-SourceCharacter)에 의해 정의된 코드 포인트를 터미널 기호로 가지고 있다. 코드 포인트 시퀀스가 정규식 패턴(regular expression patterns)으로 변환되는 방법을 설명하는 목표 기호([goal symbol](https://tc39.es/ecma262/#sec-context-free-grammars)) 패턴(*[Pattern](https://tc39.es/ecma262/#prod-Pattern))*에서 시작하는 일련의 프로덕션을 정의한다.
 - 어휘(lexical) 및 RegExp 문법의 생성은 구두점(punctuation)을 구분하는 두 개의 콜론 "::"을 사용하여 구별한다. 어휘 및 RegExp 문법은 일부 프로덕션을 공유한다.
 
-* 구두점 찍기 : 어떤 해동이나 말의 원인과 결과를 규정하는 것
+* 구두점 : 글의 뜻을 분명히 하기 위하여 찍는 쉼표와 마침표. 머무름표. 정류부
+
+### 5.1.3 숫자 문자열 문법 (The Numeric String Grammar)
+
+- 숫자 문자열 문법은 [7.1.4.1](https://tc39.es/ecma262/#sec-tonumber-applied-to-the-string-type)에 나와있다. 터미널 기호로 [SourceCharacter](https://tc39.es/ecma262/#prod-SourceCharacter)를 가지며 목표 기호([goal symbol](https://tc39.es/ecma262/#sec-context-free-grammars)) [StringNumericLiteral](https://tc39.es/ecma262/#prod-StringNumericLiteral)(숫자 리터럴([lexical grammar for numeric literals](https://tc39.es/ecma262/#sec-literals-numeric-literals))에 대한 어휘 문법과 유사하지만 구별됨)에서 시작하여 문자열을 숫자 값으로 변환하는 데 사용된다.
+- 숫자 문자열 문법의 생성은 세 개의 콜론 ":::"을 구두점으로 사용하여 구별되며 소스 텍스트를 구문 분석하는 데 사용되지 않는다.
+
+### 5.1.4 구문 문법 (**The Syntactic Grammar)**
