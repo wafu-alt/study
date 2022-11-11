@@ -380,3 +380,4 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 5.1.4 구문 문법 (**The Syntactic Grammar)**
 
 - ECMAScript의 구문 문법은 13~16절에 나와 있다. 이 문법에는 어휘 문법에 의해 터미널 기호로 정의된 ECMAScript 토큰이 있다(5.1.2). 토큰 시퀀스가 ECMAScript 프로그램의 구문적으로 올바른 독립 구성 요소를 형성하는 방법을 설명하는 두 개의 대체 목표 기호 Script 및 Module에서 시작하는 일련의 프로덕션을 정의합니다.
+- 코드 포인트 스트림이 ECMAScript 스크립트 ([Script](https://tc39.es/ecma262/#prod-Script))또는 모듈([Module](https://tc39.es/ecma262/#prod-Module))로 구문 분석(lexical grammar)될 때 먼저 어휘 문법을 반복적으로 적용하여 입력 요소 스트림으로 변환된다. 이 입력 요소 스트림은 구문 문법의 단일 응용 프로그램(single application)에 의해 구문 분석된다. 입력 요소 스트림의 토큰을 토큰이 남지 않고 목표 비터미널(([Script](https://tc39.es/ecma262/#prod-Script) or [Module](https://tc39.es/ecma262/#prod-Module))의 단일 인스턴스로 구문 분석할 수 없는 경우 입력 스트림은 구문적으로 오류가 있습니다.
