@@ -381,3 +381,8 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 
 - ECMAScript의 구문 문법은 13~16절에 나와 있다. 이 문법에는 어휘 문법에 의해 터미널 기호로 정의된 ECMAScript 토큰이 있다(5.1.2). 토큰 시퀀스가 ECMAScript 프로그램의 구문적으로 올바른 독립 구성 요소를 형성하는 방법을 설명하는 두 개의 대체 목표 기호 Script 및 Module에서 시작하는 일련의 프로덕션을 정의합니다.
 - 코드 포인트 스트림이 ECMAScript 스크립트 ([Script](https://tc39.es/ecma262/#prod-Script))또는 모듈([Module](https://tc39.es/ecma262/#prod-Module))로 구문 분석(lexical grammar)될 때 먼저 어휘 문법을 반복적으로 적용하여 입력 요소 스트림으로 변환된다. 이 입력 요소 스트림은 구문 문법의 단일 응용 프로그램(single application)에 의해 구문 분석된다. 입력 요소 스트림의 토큰을 토큰이 남지 않고 목표 비터미널(([Script](https://tc39.es/ecma262/#prod-Script) or [Module](https://tc39.es/ecma262/#prod-Module))의 단일 인스턴스로 구문 분석할 수 없는 경우 입력 스트림은 구문적으로 오류가 있습니다.
+- 구문 분석이 성공하면 각 노드가 구문 분석 노드인 루트 트리 구조인 구문 분석 트리를 구성한다. 각 구문 분석 노드는 문법에서 기호의 인스턴스이다. 해당 기호에서 파생될 수 있는 소스 텍스트의 범위를 나타낸다. 전체 소스 텍스트를 나타내는 구문 분석 트리의 루트 노드는 구문 분석의 목표 기호([goal symbol](https://tc39.es/ecma262/#sec-context-free-grammars))의 인스턴스이다. Parse Node가 nonterminal의 인스턴스일 때, 그 노드는 상위 노드의 왼쪽에 있는 프로덕션의 인스턴스이다. 또한, 프로덕션 오른쪽에 있는 각 기호마다 0개 또는 0개 이상의 하위 항목을 가지고 있다: 각 자식은 해당 기호의 인스턴스인 구문 분석 노드이다.
+
+* nonterminal node 비단말 노드 : 선형궂에서 자식 노드가 없음
+
+* [instance 인스턴스](https://terms.naver.com/entry.naver?docId=856428&cid=42346&categoryId=42346) : 객체지향프로그래밍에서 객체를 메모리에 할당 했을 때
