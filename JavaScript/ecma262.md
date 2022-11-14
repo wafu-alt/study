@@ -402,3 +402,6 @@ eval(str); // 사용을 권하지 않는다
 > Parse Nodes는 사양 아티팩트이며 유사한 데이터 구조를 사용하기 위해 구현이 필요하지 않는다.
 
 - 구문 문법의 생성은 구두점으로 콜론 ":"이 하나만 있는 것으로 구별한다.
+- 13절에서 16절에 제시된 구문 문법은 올바른 ECMAScript 스크립트([Script](https://tc39.es/ecma262/#prod-Script)) 또는 모듈([Module](https://tc39.es/ecma262/#prod-Module))로 허용되는 토큰 시퀀스에 대한 완전한 설명이 아니다. 특정 추가 토큰 시퀀스도 허용된다. 즉, 특정 위치(예: 줄 종결자 문자 앞)의 시퀀스에 세미콜론만 추가된 경우 문법으로 설명되는 토큰 시퀀스도 허용된다. 더욱이, 문법에 의해 설명된 특정 토큰 시퀀스는 라인 종결 문자가 특정 "불편한" 위치에 나타나는 경우 허용되는 것으로 간주하지 않는다.
+
+* [sequence](<https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%ED%8A%B8_(%EC%BB%B4%ED%93%A8%ED%8C%85)>) 시퀀스 : [컴퓨터 과학](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)에서 같은 값이 한 번 이상 존재할 수 있는 일련의 [값](<https://ko.wikipedia.org/wiki/%EA%B0%92_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)>)이 모여있는 [추상적 자료형](https://ko.wikipedia.org/wiki/%EC%B6%94%EC%83%81%EC%A0%81_%EC%9E%90%EB%A3%8C%ED%98%95) ??
