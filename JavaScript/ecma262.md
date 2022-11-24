@@ -418,3 +418,5 @@ eval(str); // 사용을 권하지 않는다
 ### 5.1.5.1 터미널 기호 (**Terminal Symbols)**
 
 - ECMAScript 문법에서 일부 터미널 기호는 고정 너비(fixed-width) 글꼴로 표시된다. 터미널 기호는 작성된 그대로 원본 텍스트에 표시되어야한다. 이 방법으로 지정된 모든 터미널 기호 코드 포인트는 다른 유니코드 범위에서 유사하게 보이는 코드 포인트와 달리 기본 라틴 블록의 적절한 유니코드 코드 포인트로 보아야 한다. 터미널 기호의 코드 포인트는`\` [UnicodeEscapeSequence](https://tc39.es/ecma262/#prod-UnicodeEscapeSequence)로 표현할 수 없다.
+
+### 5.1.5.2
