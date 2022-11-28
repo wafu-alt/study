@@ -419,4 +419,11 @@ eval(str); // 사용을 권하지 않는다
 
 - ECMAScript 문법에서 일부 터미널 기호는 고정 너비(fixed-width) 글꼴로 표시된다. 터미널 기호는 작성된 그대로 원본 텍스트에 표시되어야한다. 이 방법으로 지정된 모든 터미널 기호 코드 포인트는 다른 유니코드 범위에서 유사하게 보이는 코드 포인트와 달리 기본 라틴 블록의 적절한 유니코드 코드 포인트로 보아야 한다. 터미널 기호의 코드 포인트는`\` [UnicodeEscapeSequence](https://tc39.es/ecma262/#prod-UnicodeEscapeSequence)로 표현할 수 없다.
 
-### 5.1.5.2
+- 터미널 기호가 개별 유니코드 코드 포인트인 문법(즉, 어휘, RegExp 및 숫자 문자열 문법)에서 프로덕션에 나타나는 여러 고정 너비 코드 포인트의 연속 실행은 연속된 실행은 독립 실행형 터미널 기호로 작성된 동일한 코드 포인트 시퀀스의 간단한 축약형이다.
+  - 예를 들어, 프로덕션:
+    16진수 정수 리터럴 :: 0x 16진수 ([HexIntegerLiteral](https://tc39.es/ecma262/#prod-grammar-notation-HexIntegerLiteral) :: 0x [HexDigits](https://tc39.es/ecma262/#prod-HexDigits))
+  - 위는 다음을 가리키는 말이다.
+    16진수 정수 리터럴 :: 0 x 16진수 **(**[HexIntegerLiteral](https://tc39.es/ecma262/#prod-grammar-notation-HexIntegerLiteral) :: 0 x [HexDigits](https://tc39.es/ecma262/#prod-HexDigits)**)**
+- 대조적으로, 구문 문법에서 고정 너비 코드 포인트의 연속 실행은 단일 터미널 기호이다.
+
+### 5.1.5.2 비단말 기호 및 프로덕션 (Nonterminal Symbols and Productions)
