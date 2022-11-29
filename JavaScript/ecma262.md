@@ -425,5 +425,8 @@ eval(str); // 사용을 권하지 않는다
   - 위는 다음을 가리키는 말이다.
     16진수 정수 리터럴 :: 0 x 16진수 **(**[HexIntegerLiteral](https://tc39.es/ecma262/#prod-grammar-notation-HexIntegerLiteral) :: 0 x [HexDigits](https://tc39.es/ecma262/#prod-HexDigits)**)**
 - 대조적으로, 구문 문법에서 고정 너비 코드 포인트의 연속 실행은 단일 터미널 기호이다.
+- 터미널 기호는 두 가지 다른 형태로 제공된다:
+  - 어휘 및 RegExp 문법에서 일반적인 인쇄 표현이 없는 유니코드 코드 포인트는 대신 "<ABBREV>" 형식으로 표시된다. 여기서 "ABBREV"는 코드 포인트 또는 코드 포인트 집합에 대한 기억을 돕는다(mnemonic). 이러한 형식은 유니코드 형식 제어 문자([Unicode Format-Control Characters](https://tc39.es/ecma262/#sec-unicode-format-control-characters)), 공백 및 줄 종결자([Line Terminators](https://tc39.es/ecma262/#sec-line-terminators))로 정의된다.
+  - 구문 문법에서 특정 터미널 기호(예: [IdentifierName](https://tc39.es/ecma262/#prod-IdentifierName) 및 [RegularExpressionLiteral](https://tc39.es/ecma262/#prod-RegularExpressionLiteral))는 어휘 문법에서 동일한 이름의 비터미널을 참조하므로 이탤릭체로 표시된다.
 
 ### 5.1.5.2 비단말 기호 및 프로덕션 (Nonterminal Symbols and Productions)
