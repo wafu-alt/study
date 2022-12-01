@@ -430,3 +430,8 @@ eval(str); // 사용을 권하지 않는다
   - 구문 문법에서 특정 터미널 기호(예: [IdentifierName](https://tc39.es/ecma262/#prod-IdentifierName) 및 [RegularExpressionLiteral](https://tc39.es/ecma262/#prod-RegularExpressionLiteral))는 어휘 문법에서 동일한 이름의 비터미널을 참조하므로 이탤릭체로 표시된다.
 
 ### 5.1.5.2 비단말 기호 및 프로덕션 (Nonterminal Symbols and Productions)
+
+- 비단말 기호는 이탤릭체로 표시된다. 비단말기("프로덕션"이라고도 함)의 정의는 정의되는 비단말기의 이름 뒤에 하나 이상의 콜론이 붙는 방식으로 도입된다. (콜론의 수는 생성이 속한 문법을 나타낸다.) 비터미널에 대한 하나 이상의 대안적인 오른쪽으로 다음 줄에 이어진다. 예를 들어 구문 정의는 다음과 같다.
+  - WhileStatement :
+    - while ( Expression ) Statement
+    * Expression : 식 , \* Statement : 문
