@@ -237,7 +237,8 @@ ECMA-262 / 2022년 8월 10일 초안ECMA스크립트® 2023 언어 사양
 ### 4.4.20 문자열 값 (String value)
 
 - 0 또는 그 이상의 16비트 부호 없는 정수([integer](https://tc39.es/ecma262/#integer)) 값의 유한한([finite](https://tc39.es/ecma262/#finite)) 순서 시퀀스인 원시 값
-  > String 값은 String 타입([String type](https://tc39.es/ecma262/#sec-ecmascript-language-types-string-type))의 멤버입니다. 시퀀스의 각 정수 값은 일반적으로 UTF-16 텍스트의 단일 16비트 단위를 나타낸다. 그러나 ECMAScript는 값이 16비트 부호 없는 정수여야 한다는 점을 제외하고는 값에 제한이나 요구 사항을 두지 않는다.
+
+> String 값은 String 타입([String type](https://tc39.es/ecma262/#sec-ecmascript-language-types-string-type))의 멤버입니다. 시퀀스의 각 정수 값은 일반적으로 UTF-16 텍스트의 단일 16비트 단위를 나타낸다. 그러나 ECMAScript는 값이 16비트 부호 없는 정수여야 한다는 점을 제외하고는 값에 제한이나 요구 사항을 두지 않는다.
 
 ### 4.4.21 문자열 타입 (**String type)**
 
@@ -433,5 +434,11 @@ eval(str); // 사용을 권하지 않는다
 
 - 비단말 기호는 이탤릭체로 표시된다. 비단말기("프로덕션"이라고도 함)의 정의는 정의되는 비단말기의 이름 뒤에 하나 이상의 콜론이 붙는 방식으로 도입된다. (콜론의 수는 생성이 속한 문법을 나타낸다.) 비터미널에 대한 하나 이상의 대안적인 오른쪽으로 다음 줄에 이어진다. 예를 들어 구문 정의는 다음과 같다.
   - WhileStatement :
-    - while ( Expression ) Statement
-    * Expression : 식 , \* Statement : 문
+    - while ( Expression ) Statement \* Expression : 식 , \* Statement : 문
+- 비터미널 while문([WhileStatement](https://tc39.es/ecma262/#prod-grammar-notation-WhileStatement))는 토큰 while, 왼쪽 괄호 토큰, [Expression](https://tc39.es/ecma262/#prod-Expression), 오른쪽 괄호 토큰, [Statement](https://tc39.es/ecma262/#prod-Statement)를 나타낸다. [Expression](https://tc39.es/ecma262/#prod-Expression) 및 [Statement](https://tc39.es/ecma262/#prod-Statement)의 발생 자체는 비단말적이다. 또 다른 예로서 구문 정의는 다음과 같다.
+  - [ArgumentList](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList):
+    - [AssignmentExpression](https://tc39.es/ecma262/#prod-AssignmentExpression)
+    - [ArgumentList](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList), [AssignmentExpression](https://tc39.es/ecma262/#prod-AssignmentExpression)
+    * [ArgumentList](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList) 인수목록
+    * [AssignmentExpression](https://tc39.es/ecma262/#prod-AssignmentExpression) 할당식
+- [ArgumentList](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)는 단일 [AssignmentExpression](https://tc39.es/ecma262/#prod-AssignmentExpression) 또는 `ArgumentList`, `AssignmentExpression` 중 하나를 나타낼 수 있다. ArgumentList의 이 정의는 재귀적이다. 즉, 자체적으로 정의된다. 결과적으로 ArgumentList는 쉼표로 구분된 양수 인수를 포함할 수 있으며 각 인수 표현식은 AssignmentExpression이다. 이러한 비터미널의 재귀적 정의는 일반적이다.
