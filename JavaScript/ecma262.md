@@ -442,3 +442,33 @@ eval(str); // 사용을 권하지 않는다
     * [ArgumentList](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList) 인수목록
     * [AssignmentExpression](https://tc39.es/ecma262/#prod-AssignmentExpression) 할당식
 - [ArgumentList](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)는 단일 [AssignmentExpression](https://tc39.es/ecma262/#prod-AssignmentExpression) 또는 `ArgumentList`, `AssignmentExpression` 중 하나를 나타낼 수 있다. ArgumentList의 이 정의는 재귀적이다. 즉, 자체적으로 정의된다. 결과적으로 ArgumentList는 쉼표로 구분된 양수 인수를 포함할 수 있으며 각 인수 표현식은 AssignmentExpression이다. 이러한 비터미널의 재귀적 정의는 일반적이다.
+
+### 5.1.5.3 선택적 기호 (Optional Symbols)
+
+- 첨자 접미사 "opt"는 터미널(terminal) 또는 비터미널(nonterminal) 뒤에 나타날 수 있으며 선택 기호를 나타낸다. 선택적 기호를 포함하는 대안은 실제로 두 개의 오른쪽면을 지정한다. 하나는 선택적 요소를 생략하고 다른 하나는 선택적 요소를 포함한다. 이는 다음을 의미한다.
+  - [VariableDeclaration](https://tc39.es/ecma262/#prod-grammar-notation-VariableDeclaration) :
+    - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier) [Initializer](https://tc39.es/ecma262/#prod-Initializer)opt
+      *변수선언
+      *바인딩 식별자 이니셜라이저opt
+- 다음은 편리한 약어
+  - [VariableDeclaration](https://tc39.es/ecma262/#prod-grammar-notation-VariableDeclaration) :
+    - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier)
+    - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier) [Initializer](https://tc39.es/ecma262/#prod-Initializer)
+- 그리고
+  - [ForStatement](https://tc39.es/ecma262/#prod-grammar-notation-ForStatement) :
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) [Expression](https://tc39.es/ecma262/#prod-Expression) opt ; [Expression](https://tc39.es/ecma262/#prod-Expression) opt)
+    - [Statement](https://tc39.es/ecma262/#prod-Statement)
+    * for문
+    * 어휘선언 opt ; 표현옵션 opt
+    * 문(성명서, 기재, 이야기)
+- 편리한 약어
+  - [ForStatement](https://tc39.es/ecma262/#prod-grammar-notation-ForStatement) :
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) ;[Expression](https://tc39.es/ecma262/#prod-Expression) opt ) [Statement](https://tc39.es/ecma262/#prod-Statement)
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) [Expression](https://tc39.es/ecma262/#prod-Expression) ; [Expression](https://tc39.es/ecma262/#prod-Expression) opt ) [Statement](https://tc39.es/ecma262/#prod-Statement)
+- 약어로하면
+  - [ForStatement](https://tc39.es/ecma262/#prod-grammar-notation-ForStatement) :
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) ) [Statement](https://tc39.es/ecma262/#prod-Statement)
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) ; [Expression](https://tc39.es/ecma262/#prod-Expression)) [Statement](https://tc39.es/ecma262/#prod-Statement)
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) [Expression](https://tc39.es/ecma262/#prod-Expression) ; ) [Statement](https://tc39.es/ecma262/#prod-Statement)
+    - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) [Expression](https://tc39.es/ecma262/#prod-Expression) ; [Expression](https://tc39.es/ecma262/#prod-Expression) ) [Statement](https://tc39.es/ecma262/#prod-Statement)
+- 따라서 이 예에서 비터미널 [ForStatement](https://tc39.es/ecma262/#prod-grammar-notation-ForStatement)에는 실제로 4개의 대체 오른쪽이 있다.
