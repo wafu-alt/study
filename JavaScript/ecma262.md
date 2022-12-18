@@ -472,3 +472,24 @@ eval(str); // 사용을 권하지 않는다
     - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) [Expression](https://tc39.es/ecma262/#prod-Expression) ; ) [Statement](https://tc39.es/ecma262/#prod-Statement)
     - for ([LexicalDeclaration](https://tc39.es/ecma262/#prod-LexicalDeclaration) [Expression](https://tc39.es/ecma262/#prod-Expression) ; [Expression](https://tc39.es/ecma262/#prod-Expression) ) [Statement](https://tc39.es/ecma262/#prod-Statement)
 - 따라서 이 예에서 비터미널 [ForStatement](https://tc39.es/ecma262/#prod-grammar-notation-ForStatement)에는 실제로 4개의 대체 오른쪽이 있다.
+
+### 5.1.5.4 문법적 매개변수 (Grammatical Parameters)
+
+- 프로덕션은 "[parameters]" 형식의 아래 첨자 주석으로 매개변수화될 수 있으며, 이는 프로덕션에 의해 정의된 비터미널 기호에 대한 접미사로 나타날 수 있다. "parameters"는 단일 이름이거나 쉼표로 구분된 이름 목록일 수 있다. 매개변수화된 프로덕션은 매개변수화된 비터미널 기호에 추가된 밑줄이 앞에 오는 매개변수 이름의 모든 조합을 정의하는 프로덕션 세트의 약칭이다. 이는 다음을 의미한다.
+  - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList) [Return] :
+    - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+    - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+    * 문 목록 (반환)
+    * 반환문
+    * 표현문
+- 다음의 편리한 약어이다.
+  - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList):
+    - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+    - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+  - [StatementList_Return](https://tc39.es/ecma262/#prod-grammar-notation-StatementList_Return):
+    - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+    - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+- 그리고
+  - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList) [Return, In] :
+    - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+    - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
