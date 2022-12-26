@@ -493,3 +493,44 @@ eval(str); // 사용을 권하지 않는다
   - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList) [Return, In] :
     - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
     - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+- 다음은 약어다.
+    - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+    - [StatementList_Return](https://tc39.es/ecma262/#prod-grammar-notation-StatementList_Return):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+    - [StatementList_In](https://tc39.es/ecma262/#prod-grammar-notation-StatementList_In):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+    - [StatementList_Return_In](https://tc39.es/ecma262/#prod-grammar-notation-StatementList_Return_In):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+- 여러 매개변수는 조합 수의 생산물을 생성하며, 전체 문법에서 반드시 모든 것이 참조되는 것은 아니다. 프로덕션의 오른쪽에 있는 비터미널에 대한 참조도 매개변수화할 수 있다. 예를 들어:
+    - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)[+In]
+- 다음과 같다
+    - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - ExpressionStatement_In
+- 그리고
+    - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)[~In]
+- 다음과 같다
+    - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList):
+        - [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
+        - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+- 비터미널 참조는 매개변수 목록과 "opt" 접미사를 모두 가질 수 있다. 예를 들어:
+    - [VariableDeclaration](https://tc39.es/ecma262/#prod-grammar-notation-VariableDeclaration):
+        - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier)
+        - [Initializer](https://tc39.es/ecma262/#prod-Initializer)[+In]opt
+        *변수선언
+- 다음은 약어다.
+    - [VariableDeclaration](https://tc39.es/ecma262/#prod-grammar-notation-VariableDeclaration):
+        - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier)
+        - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier) Initializer_In
+- 매개변수 이름에 "?" 접두사 추가 오른쪽 비터미널 참조에서 해당 매개변수 값은 현재 프로덕션의 왼쪽 기호에 대한 참조에서 매개변수 이름의 발생에 따라 달라진다. 예를 들어:
+    - [VariableDeclaration](https://tc39.es/ecma262/#prod-grammar-notation-VariableDeclaration)[In] :
+        - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier) [Initializer](https://tc39.es/ecma262/#prod-Initializer)[?In]
