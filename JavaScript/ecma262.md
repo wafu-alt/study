@@ -534,7 +534,7 @@ eval(str); // 사용을 권하지 않는다
 - 매개변수 이름에 "?" 접두사 추가 오른쪽 비터미널 참조에서 해당 매개변수 값은 현재 프로덕션의 왼쪽 기호에 대한 참조에서 매개변수 이름의 발생에 따라 달라진다. 예를 들어:
     - [VariableDeclaration](https://tc39.es/ecma262/#prod-grammar-notation-VariableDeclaration)[In] :
         - [BindingIdentifier](https://tc39.es/ecma262/#prod-BindingIdentifier) [Initializer](https://tc39.es/ecma262/#prod-Initializer)[?In]
-      - 오른쪽 대안에 "[+parameter]"가 접두사로 붙는 경우 해당 대안은 명명된 매개변수가 프로덕션의 비터미널 기호를 참조하는 데 사용된 경우에만 사용할 수 있다. 오른쪽 대안이 "[~parameter]" 접두사로 붙는 경우 해당 대안은 명명된 매개변수가 프로덕션의 비터미널 기호를 참조하는 데 사용되지 않은 경우에만 사용할 수 있다. 이는 다음을 의미한다.
+- 오른쪽 대안에 "[+parameter]"가 접두사로 붙는 경우 해당 대안은 명명된 매개변수가 프로덕션의 비터미널 기호를 참조하는 데 사용된 경우에만 사용할 수 있다. 오른쪽 대안이 "[~parameter]" 접두사로 붙는 경우 해당 대안은 명명된 매개변수가 프로덕션의 비터미널 기호를 참조하는 데 사용되지 않은 경우에만 사용할 수 있다. 이는 다음을 의미한다.
     - [StatementList](https://tc39.es/ecma262/#prod-grammar-notation-StatementList) [Return] :
         - [+Return] [ReturnStatement](https://tc39.es/ecma262/#prod-ReturnStatement)
         - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
