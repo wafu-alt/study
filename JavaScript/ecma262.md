@@ -555,3 +555,24 @@ eval(str); // 사용을 권하지 않는다
         - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
     - [StatementList_Return](https://tc39.es/ecma262/#prod-grammar-notation-StatementList_Return):
         - [ExpressionStatement](https://tc39.es/ecma262/#prod-ExpressionStatement)
+### 5.1.5.5 중 하나 (one of)
+
+- "one of"라는 단어가 문법 정의에서 콜론 뒤에 오는 경우 다음 줄의 각 터미널 기호가 대체 정의임을 나타낸다. 예를 들어 ECMAScript의 어휘 문법에는 생산이 포함된다.
+    - [NonZeroDigit](https://tc39.es/ecma262/#prod-grammar-notation-NonZeroDigit) :: one of
+        - 1 2 3 4 5 6 7 8 9
+        *다음 중 하나
+- 이것은 단지 다음에 대한 편리한 약어일 뿐이다.
+    - [NonZeroDigit](https://tc39.es/ecma262/#prod-grammar-notation-NonZeroDigit) ::
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+
+### 5.1.5.6 비어있음 ([empty])
+
+- 프로덕션의 오른쪽에 "[empty]"이라는 문구가 나타나면 프로덕션의 오른쪽에 터미널이나 비터미널이 포함되어 있지 않음을 나타낸다.
