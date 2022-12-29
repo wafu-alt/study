@@ -576,3 +576,21 @@ eval(str); // 사용을 권하지 않는다
 ### 5.1.5.6 비어있음 ([empty])
 
 - 프로덕션의 오른쪽에 "[empty]"이라는 문구가 나타나면 프로덕션의 오른쪽에 터미널이나 비터미널이 포함되어 있지 않음을 나타낸다.
+      
+### 5.1.5.7 미리 보기 제한 사항 (**Lookahead Restrictions)**
+
+- 프로덕션의 오른쪽에 "[lookahead = seq]" 문구가 나타나면 토큰 시퀀스 seq가 바로 뒤에 오는 입력 토큰 시퀀스의 접두사일 경우에만 프로덕션을 사용할 수 있음을 나타낸다. 유사하게 "[lookahead ∈ set]"는 set이 비어 있지 않은 유한한([finite](https://tc39.es/ecma262/#finite)) 토큰 시퀀스 집합인 경우 set의 일부 요소가 바로 뒤따르는 토큰 시퀀스의 접두사인 경우에만 생산이 사용될 수 있음을 나타낸다. 편의상 집합을 비단말기로 작성할 수도 있으며, 이 경우 비단말이 확장할 수 있는 모든 토큰 시퀀스 집합을 나타낸다. 비터미널이 무한히 많은 개별 토큰 시퀀스로 확장될 수 있는 경우 편집 오류로 간주된다.
+- 이러한 조건은 무효화될 수 있다. "[lookahead ≠ seq]"는 seq가 바로 뒤따르는 입력 토큰 시퀀스의 접두어가 아닌 경우에만 포함된 프로덕션이 사용될 수 있음을 나타내고 "[lookahead ∉ set]"는 다음의 요소가 없는 경우에만 프로덕션이 사용될 수 있음을 나타낸다. set은 바로 뒤에 오는 토큰 시퀀스의 접두사이다.
+- 예를 들어 정의가 주어진 경우:
+    - [DecimalDigit](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigit) :: one of
+        - 0 1 2 3 4 5 6 7 8 9
+    - [DecimalDigits](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigits)  ::
+        - *[DecimalDigit](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigit)*
+        - [DecimalDigits](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigits) [DecimalDigit](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigit)
+        * 10진수
+- 정의된다.
+    - [LookaheadExample](https://tc39.es/ecma262/#prod-grammar-notation-LookaheadExample) ::
+        - n [lookahead ∉ { 1, 3, 5, 7, 9 }] [DecimalDigits](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigits)
+        - [DecimalDigit](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigit) [lookahead ∉[DecimalDigit](https://tc39.es/ecma262/#prod-grammar-notation-DecimalDigit)]
+- 문자 n 뒤에 첫 번째가 짝수인 하나 이상의 10진수 또는 다른 10진수가 뒤따르지 않는 10진수와 일치한다.
+- 이러한 구문이 구문 문법에서 사용되는 경우 나중 토큰을 결정하려면 나중 위치에서 사용할 어휘 목표 기호를 알아야 하기 때문에 바로 뒤에 오는 토큰 시퀀스를 명확하게 식별하는 것이 불가능할 수 있다. 이와 같이 구문 문법에서 사용되는 경우 사용할 어휘 목표 기호([goal symbol](https://tc39.es/ecma262/#sec-context-free-grammars))의 선택이 변경될 수 있는 경우 토큰 시퀀스 seq가 미리 보기 제한(시퀀스 집합의 일부 포함)에 나타나는 것은 편집 오류로 간주된다. seq가 결과 토큰 시퀀스의 접두사인지 여부이다.
