@@ -171,6 +171,47 @@ PCIe 버전
 - CPU가 메모리와 데이터를 주고 받을때 128비트 사용
 - 메모리 1개는 64비트를 지원. 2개씩 묶으면 128을 맞출 수 있음
 
+### 메인보드(Mainboard) [예시](https://prod.danawa.com/info/?pcode=19536062&cate=112751&adinflow=Y#bookmark_product_information)
+![image](https://github.com/wafu-alt/study/assets/83447120/49f83b59-498e-4644-aec7-5d2517ef170f)
+제품 분류
+
+- CPU 호환되는 규격. 인텔, AMD가 있다
+
+CPU 소켓
+
+- CPU 장착하는 부분
+
+세부 칩셋
+
+- 각 메인보드마다 지원하는 소켓 수와 종류가 다르다
+- 칩셋(chipset) : 중앙제어장치와 같은 역할
+- 칩셋 종류마다 메모리 오버클럭을 할 수 있다.
+    - 메모리 RAM 작동 주파수와 지연 특성을 타이밍이라고 불리운다
+    - 타이밍을 낮게, 주파수를 높게해서 더 빠르게 데이터 전송하는 방식
+- CPU와 타 장치 사이에서 데이터를 중개역할
+
+폼팩터(Form Factor)
+
+- 메인보드 크기에 따른 분류
+- 전원, 케이스 내부의 메인보드 위치, 공기의 흐름, 메인보드 외부 커넥터를 위한 I/O 플레이트 크기 등이 정의되어있음
+- 아래 사진으로 크기 비교되고 mm 단위이다
+
+![image](https://github.com/wafu-alt/study/assets/83447120/204ed9f0-97df-46cb-b642-b96c329c2391)
+
+
+![image](https://github.com/wafu-alt/study/assets/83447120/b09bbea3-585f-4f95-abe7-bc0d3e28ba13)
+
+
+전원부
+- 페이즈(Phase) : 파워서플라이가 전기를 만들어주는 것을 받아서 해당 하드웨어에 전기를 배분하는 역할
+    - 300W를 배분할때 5개 페이즈면 각 페이즈마다 60W 배분해서 페이즈가 부담한다.
+    - 페이즈가 많을 수록 배분량이 줄어 발열량이 줄어든다.
+        
+        ![image](https://github.com/wafu-alt/study/assets/83447120/ed6674c3-a20e-4b53-a3f3-9e019f48b49a)
+
+
+
+      
 ### 1bit와 2수 (다른 말로 디지털)
 
 - 1bit(비트)를 전기 스위치 on / off로 표현
