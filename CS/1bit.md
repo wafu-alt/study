@@ -375,3 +375,29 @@ PCIe슬롯
         - 8 x 4byte = 32byte = 256bit (32 x 8)
 - bitmap = 각 화소를 그대로 저장하는 방법 → 그래서 용량이 큼 , 잘 사용하지 않음
 - 압축기술을 통해 압축한 파일을 사용
+### 디지털 회로
+
+- CPU가 게이트 회로로 이루어짐
+- 전자식 계산기
+- not = Inverter
+- XOR = exclusive or (익스크루시브 or) = 배타적 논리합
+- A, B가 input일 때 아래와 같이 산수 연산
+
+![image](https://github.com/wafu-alt/study/assets/83447120/f8278057-7aab-4afa-b51e-5faeaadb81bf)
+
+
+- TTL gate를 내장한 IC칩셋을 반도체라고 할 수 있음
+    - transistor-transistor logic
+    - 트랜지스터를 조합한 논리 회로
+    - 전기가 신호가 되어서 값이 각각 2개 on / off = 도체일 수도 부도체일 수도 ⇒ 반도체
+
+![image](https://github.com/wafu-alt/study/assets/83447120/6f6bfea4-94ce-4901-a85c-a9c38da9c93b)
+
+
+![image](https://github.com/wafu-alt/study/assets/83447120/f3be8033-5c2f-4e17-844a-9194a2d6d29b)
+
+
+- 각 inputA + inputB  결과가 2가지
+- input에 2가지 값을 가져서 1bit라고 할 수 있음 on / off
+
+
