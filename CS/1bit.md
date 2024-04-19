@@ -400,4 +400,41 @@ PCIe슬롯
 - 각 inputA + inputB  결과가 2가지
 - input에 2가지 값을 가져서 1bit라고 할 수 있음 on / off
 
+### 덧셈
 
+- 반 가산기
+    - XOR + AND 게이트로 이루어짐
+        
+        ![image](https://github.com/wafu-alt/study/assets/83447120/01245491-24d9-4524-87eb-6498aa9e8558)
+
+        
+    - 결과값과 C (carry out=자리 올림) 출력값을 가짐
+        
+        ![image](https://github.com/wafu-alt/study/assets/83447120/d0319332-d483-433a-bd56-6e2de9a4a353)
+
+        
+    - A + B를 더하는 계산기를 만들 수 있음
+        - 2진수로 1 + 1 = 10 → 10진수 2+0 = 2
+    - bit합산이 2개만 됨
+- 전 가산기
+    - 여러 bit합산을 할 수 있게 구성됨
+    - XOR 2개, OR 1개, AND 2개 게이트로 구성
+    - Cin은 이전 자리올림
+    
+        ![image](https://github.com/wafu-alt/study/assets/83447120/7cad07d6-6d34-4dc6-b5ec-3118404b1d04)
+
+    
+
+        ![image](https://github.com/wafu-alt/study/assets/83447120/b2197cee-9071-471b-9d56-7f2a22b2b7c5)
+
+
+        ![image](https://github.com/wafu-alt/study/assets/83447120/4b71b8a6-bdb1-40fb-80bc-c1d3601a8896)
+
+
+- 위의 전 가산기를 붙여서 아래 4bit 가산기를 만들 수 있음
+
+![image](https://github.com/wafu-alt/study/assets/83447120/1a7b354a-9832-4229-afff-4a6f7f5e40dc)
+
+
+![image](https://github.com/wafu-alt/study/assets/83447120/163d41e3-d54e-4a5f-90c2-fa1f6432dda6)
+- https://kldp.org/node/110850 참조
