@@ -535,4 +535,25 @@ PCIe슬롯
     ![image](https://github.com/wafu-alt/study/assets/83447120/8f8afc0b-5a0a-438f-a993-e3aab850e00a)
     - [이미지 참조 링크](https://hongong.hanbit.co.kr/%EC%BB%B4%ED%93%A8%ED%84%B0%EC%9D%98-4%EA%B0%80%EC%A7%80-%ED%95%B5%EC%8B%AC-%EB%B6%80%ED%92%88cpu-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EB%B3%B4%EC%A1%B0%EA%B8%B0%EC%96%B5%EC%9E%A5/)
     
-   
+### 기억장치의 종류와 역할
+
+![image](https://github.com/wafu-alt/study/assets/83447120/ffc0421a-3df0-4d39-a352-a3607e28c6d0)
+- [이미지 참조 링크](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=techref&logNo=222246966805)
+
+- CPU
+    - Register
+    - L1,2,3 캐시 메모리(Cache memory)
+        - RAM과 속도 차이 나는 부분을 메꾸기 위함
+        - 정보 - 프로그램 코드, 코드를 연산해야 할 대상
+        - CPU가 미리 예측해서 캐시 메모리에 임시 저장함
+            - 예측 실패할 경우 캐시 폴트(fault)
+            - 실패하면 RAM에서 찾고 RAM에서 업으면 보조 메모리에서 찾음
+    - 속도가 굉장히 빠름
+    - 고가
+    - 메모리 크기가 작음 (메모리 용량 취급 안하고 CPU일부로 취급)
+- 메인 메모리(1차)
+    - RAM
+    - 휘발성 메모리 (전원 끄면 데이터 날라감)
+    - CPU 다음으로 속도가 빠름
+- 보조 메모리(2차)
+    - HDD, SSD, USB disk 등
